@@ -10,4 +10,5 @@ import Foundation
 
 protocol WeatherDetailHandlerProtocol {
     func fetchCityWeatherInfo(withCity city: City, completion: @escaping ((Result<WeatherInformation, ErrorResult>) -> Void))
+    //func load<T>(withCity city: City?, completion: @escaping (T?) -> Void)
 }

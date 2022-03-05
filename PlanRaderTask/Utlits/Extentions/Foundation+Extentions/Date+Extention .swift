@@ -11,10 +11,11 @@ import Foundation
 
 extension Date{
     
-    func getTimeStringFromDate() -> String {
+    var getTimeStringFromDate : String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .none
+        dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .short
+        dateFormatter.locale=Locale(identifier: "en")
         let dataString = dateFormatter.string(from: self)
         return dataString
     }

@@ -15,6 +15,7 @@
 		A11F5E6A27D3B78100FBF3C9 /* WebServiceMangerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11F5E6727D3B77800FBF3C9 /* WebServiceMangerHandler.swift */; };
 		A11F5E6E27D3B7DF00FBF3C9 /* WebServiceMangerHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11F5E6D27D3B7DF00FBF3C9 /* WebServiceMangerHandlerProtocol.swift */; };
 		A11F5E7027D3CE0100FBF3C9 /* UILabel+Extention .swift in Sources */ = {isa = PBXBuildFile; fileRef = A11F5E6F27D3CE0100FBF3C9 /* UILabel+Extention .swift */; };
+		A11F5EEE27D3E48C00FBF3C9 /* String+Extention .swift in Sources */ = {isa = PBXBuildFile; fileRef = A11F5EED27D3E48C00FBF3C9 /* String+Extention .swift */; };
 		A1616E6627D3AA3800142096 /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1616E6527D3AA3700142096 /* PersistanceManager.swift */; };
 		A1616E6727D3AA3800142096 /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1616E6527D3AA3700142096 /* PersistanceManager.swift */; };
 		A1616E6827D3AA3800142096 /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1616E6527D3AA3700142096 /* PersistanceManager.swift */; };
@@ -245,6 +246,7 @@
 		A11F5E6727D3B77800FBF3C9 /* WebServiceMangerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceMangerHandler.swift; sourceTree = "<group>"; };
 		A11F5E6D27D3B7DF00FBF3C9 /* WebServiceMangerHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceMangerHandlerProtocol.swift; sourceTree = "<group>"; };
 		A11F5E6F27D3CE0100FBF3C9 /* UILabel+Extention .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extention .swift"; sourceTree = "<group>"; };
+		A11F5EED27D3E48C00FBF3C9 /* String+Extention .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extention .swift"; sourceTree = "<group>"; };
 		A1616E6527D3AA3700142096 /* PersistanceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistanceManager.swift; sourceTree = "<group>"; };
 		A17099F027D33320002D21AE /* PlanRaderTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanRaderTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A17099F327D33320002D21AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -646,6 +648,7 @@
 			isa = PBXGroup;
 			children = (
 				A1709C1B27D35472002D21AE /* Date+Extention .swift */,
+				A11F5EED27D3E48C00FBF3C9 /* String+Extention .swift */,
 			);
 			path = "Foundation+Extentions";
 			sourceTree = "<group>";
@@ -834,6 +837,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = A17099E727D33320002D21AE;
 			productRefGroup = A17099F127D33320002D21AE /* Products */;
@@ -1038,6 +1042,7 @@
 				A1709C3127D3550F002D21AE /* UINavigationController+Extentions.swift in Sources */,
 				A1709C7127D35718002D21AE /* WeatherDetailViewModel.swift in Sources */,
 				A1709C0A27D352D9002D21AE /* FileManagerHandlerProtocol.swift in Sources */,
+				A11F5EEE27D3E48C00FBF3C9 /* String+Extention .swift in Sources */,
 				A1709C4D27D35718002D21AE /* CityListHandler.swift in Sources */,
 				A1709BFB27D352D9002D21AE /* NetworkingError.swift in Sources */,
 				A1709C7427D35718002D21AE /* WeatherDetailViewController.swift in Sources */,

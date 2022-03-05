@@ -6,4 +6,3 @@
 //
 
 import Foundation
-func load<T>(resource: FileManagerResource<T>, completion: @escaping (T?) -> Void)

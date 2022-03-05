@@ -33,7 +33,17 @@ class WeatherDetailViewController: UIViewController {
         self.view.backgroundColor = UIColor.viewBackgroundColor
     }
     func setupUIFromModel(model:WeatherInformation?) {
-        self.tempratureLabel.text = model?.name
+        let date=Date()
+        self.cityInfoLabel.setCityInfoData(name: model?.name,date: date.getTimeStringFromDate)
+        self.weatherStatusImage.image=UIImage(named: WeatherImageProvider().provideValue(model?.weather?[0].main ?? ""))
+        print("🙄 \(model?.name)")
+
+        self.descriptionLabel.setDescription(model?.weather?[0].main ?? "")
+        self.tempLabel.setTemp(model?.main?.temp)
+        self.humidityLabel.setHumidity(model?.main?.humidity)
+        self.windSpeed.setWindSpeed(model?.wind?.speed)
+
+
     }
    
     func setupViewModel() {

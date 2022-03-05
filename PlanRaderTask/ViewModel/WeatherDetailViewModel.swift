@@ -28,6 +28,26 @@ class WeatherDetailViewModel: WeatherDetailViewModelProtocol {
     private func fetchCityWeatherInfo() {
         if let city = self.city {
             DispatchQueue.global(qos: .userInteractive).async {
+//                self.weatherDetailHandler.load(withCity: city) {object in
+//                    self?.isFinished.value = true
+//
+//                    guard let data = object as? Data else {
+//                        completion(.failure(.parser(string: "Error while parsing APIs")))
+//                        return }
+//                    do {
+//                        let model = try JSONDecoder().decode(WeatherInformation.self, from: data)
+//                        completion(.success(model))
+//                        self?.cityWeather.value = model
+//                    } catch {
+//                        completion(.failure(.parser(string: "Error while parsing json data")))
+//                    }
+//                    do {
+//                        let model = try JSONDecoder().decode(WeatherInformation.self, from: data)
+//                        completion(.success(model))
+//                    } catch {
+//                        completion(.failure(.parser(string: "Error while parsing json data")))
+//                    }
+//                }
                 self.weatherDetailHandler.fetchCityWeatherInfo(withCity: city) { [weak self] result in
                     DispatchQueue.main.async {
                         self?.isFinished.value = true
