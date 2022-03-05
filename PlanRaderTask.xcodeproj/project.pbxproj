@@ -17,6 +17,10 @@
 		A1709A0E27D33325002D21AE /* PlanRaderTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709A0D27D33325002D21AE /* PlanRaderTaskTests.swift */; };
 		A1709A1827D33325002D21AE /* PlanRaderTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709A1727D33325002D21AE /* PlanRaderTaskUITests.swift */; };
 		A1709A1A27D33325002D21AE /* PlanRaderTaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709A1927D33325002D21AE /* PlanRaderTaskUITestsLaunchTests.swift */; };
+		A1709A2927D33410002D21AE /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709A2727D33410002D21AE /* CityCell.swift */; };
+		A1709A2A27D33410002D21AE /* CityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1709A2827D33410002D21AE /* CityCell.xib */; };
+		A1709A2E27D33514002D21AE /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1709A2D27D33514002D21AE /* Colors.xcassets */; };
+		A1709A3127D33647002D21AE /* CitiesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709A3027D33647002D21AE /* CitiesTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		A1709A1327D33325002D21AE /* PlanRaderTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanRaderTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1709A1727D33325002D21AE /* PlanRaderTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanRaderTaskUITests.swift; sourceTree = "<group>"; };
 		A1709A1927D33325002D21AE /* PlanRaderTaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanRaderTaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A1709A2727D33410002D21AE /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
+		A1709A2827D33410002D21AE /* CityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityCell.xib; sourceTree = "<group>"; };
+		A1709A2D27D33514002D21AE /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		A1709A3027D33647002D21AE /* CitiesTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +109,12 @@
 		A17099F227D33320002D21AE /* PlanRaderTask */ = {
 			isa = PBXGroup;
 			children = (
+				A1709A2627D333E4002D21AE /* Cities */,
 				A17099F327D33320002D21AE /* AppDelegate.swift */,
 				A17099F527D33320002D21AE /* SceneDelegate.swift */,
 				A17099F727D33320002D21AE /* ViewController.swift */,
 				A17099F927D33320002D21AE /* Main.storyboard */,
-				A17099FF27D33324002D21AE /* Assets.xcassets */,
+				A1709A2C27D334F7002D21AE /* Resourses */,
 				A1709A0127D33324002D21AE /* LaunchScreen.storyboard */,
 				A1709A0427D33324002D21AE /* Info.plist */,
 				A17099FC27D33320002D21AE /* PlanRaderTask.xcdatamodeld */,
@@ -128,6 +137,41 @@
 				A1709A1927D33325002D21AE /* PlanRaderTaskUITestsLaunchTests.swift */,
 			);
 			path = PlanRaderTaskUITests;
+			sourceTree = "<group>";
+		};
+		A1709A2627D333E4002D21AE /* Cities */ = {
+			isa = PBXGroup;
+			children = (
+				A1709A2F27D3361D002D21AE /* Controller */,
+				A1709A2B27D33414002D21AE /* Cells */,
+			);
+			path = Cities;
+			sourceTree = "<group>";
+		};
+		A1709A2B27D33414002D21AE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A1709A2727D33410002D21AE /* CityCell.swift */,
+				A1709A2827D33410002D21AE /* CityCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		A1709A2C27D334F7002D21AE /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				A17099FF27D33324002D21AE /* Assets.xcassets */,
+				A1709A2D27D33514002D21AE /* Colors.xcassets */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		A1709A2F27D3361D002D21AE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A1709A3027D33647002D21AE /* CitiesTVC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,8 +278,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1709A2E27D33514002D21AE /* Colors.xcassets in Resources */,
 				A1709A0327D33324002D21AE /* LaunchScreen.storyboard in Resources */,
 				A1709A0027D33324002D21AE /* Assets.xcassets in Resources */,
+				A1709A2A27D33410002D21AE /* CityCell.xib in Resources */,
 				A17099FB27D33320002D21AE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,8 +307,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1709A3127D33647002D21AE /* CitiesTVC.swift in Sources */,
 				A17099F827D33320002D21AE /* ViewController.swift in Sources */,
 				A17099F427D33320002D21AE /* AppDelegate.swift in Sources */,
+				A1709A2927D33410002D21AE /* CityCell.swift in Sources */,
 				A17099FE27D33320002D21AE /* PlanRaderTask.xcdatamodeld in Sources */,
 				A17099F627D33320002D21AE /* SceneDelegate.swift in Sources */,
 			);
