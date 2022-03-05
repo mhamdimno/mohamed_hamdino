@@ -9,6 +9,6 @@
 import Foundation
 
 protocol WeatherListHandlerProtocol {
-    func fetchCitiesFromStorge(completion: @escaping ((Result<[WeatherData], ErrorResult>) -> Void))
+//    func fetchCitiesFromStorge(completion: @escaping ((Result<[WeatherData], ErrorResult>) -> Void))
 
 }
