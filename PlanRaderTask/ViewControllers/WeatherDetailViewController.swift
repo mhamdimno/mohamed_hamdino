@@ -35,9 +35,8 @@ class WeatherDetailViewController: UIViewController {
     func setupUIFromModel(model:WeatherInformation?) {
         let date=Date()
         self.cityInfoLabel.setCityInfoData(name: model?.name,date: date.getTimeStringFromDate)
-        self.weatherStatusImage.image=UIImage(named: WeatherImageProvider().provideValue(model?.weather?[0].main ?? ""))
-        print("🙄 \(model?.name)")
-
+        self.weatherStatusImage.set(WeatherImageProvider().provideValue(model?.weather?[0].main ?? ""))
+                                    
         self.descriptionLabel.setDescription(model?.weather?[0].main ?? "")
         self.tempLabel.setTemp(model?.main?.temp)
         self.humidityLabel.setHumidity(model?.main?.humidity)

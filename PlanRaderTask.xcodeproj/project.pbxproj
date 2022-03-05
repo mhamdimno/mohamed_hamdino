@@ -16,6 +16,8 @@
 		A11F5E6E27D3B7DF00FBF3C9 /* WebServiceMangerHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11F5E6D27D3B7DF00FBF3C9 /* WebServiceMangerHandlerProtocol.swift */; };
 		A11F5E7027D3CE0100FBF3C9 /* UILabel+Extention .swift in Sources */ = {isa = PBXBuildFile; fileRef = A11F5E6F27D3CE0100FBF3C9 /* UILabel+Extention .swift */; };
 		A11F5EEE27D3E48C00FBF3C9 /* String+Extention .swift in Sources */ = {isa = PBXBuildFile; fileRef = A11F5EED27D3E48C00FBF3C9 /* String+Extention .swift */; };
+		A11F5EF027D3E5F400FBF3C9 /* CustomImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11F5EEF27D3E5F400FBF3C9 /* CustomImage.swift */; };
+		A11F5EF227D3E65C00FBF3C9 /* UIImageView+Extention .swift in Sources */ = {isa = PBXBuildFile; fileRef = A11F5EF127D3E65C00FBF3C9 /* UIImageView+Extention .swift */; };
 		A1616E6627D3AA3800142096 /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1616E6527D3AA3700142096 /* PersistanceManager.swift */; };
 		A1616E6727D3AA3800142096 /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1616E6527D3AA3700142096 /* PersistanceManager.swift */; };
 		A1616E6827D3AA3800142096 /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1616E6527D3AA3700142096 /* PersistanceManager.swift */; };
@@ -247,6 +249,8 @@
 		A11F5E6D27D3B7DF00FBF3C9 /* WebServiceMangerHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceMangerHandlerProtocol.swift; sourceTree = "<group>"; };
 		A11F5E6F27D3CE0100FBF3C9 /* UILabel+Extention .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extention .swift"; sourceTree = "<group>"; };
 		A11F5EED27D3E48C00FBF3C9 /* String+Extention .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extention .swift"; sourceTree = "<group>"; };
+		A11F5EEF27D3E5F400FBF3C9 /* CustomImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImage.swift; sourceTree = "<group>"; };
+		A11F5EF127D3E65C00FBF3C9 /* UIImageView+Extention .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extention .swift"; sourceTree = "<group>"; };
 		A1616E6527D3AA3700142096 /* PersistanceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistanceManager.swift; sourceTree = "<group>"; };
 		A17099F027D33320002D21AE /* PlanRaderTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanRaderTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A17099F327D33320002D21AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -568,6 +572,7 @@
 			children = (
 				A1709A9627D33B97002D21AE /* CustomLabel.swift */,
 				A1709A9D27D33D7E002D21AE /* UILabels.swift */,
+				A11F5EEF27D3E5F400FBF3C9 /* CustomImage.swift */,
 			);
 			path = Label;
 			sourceTree = "<group>";
@@ -585,6 +590,7 @@
 		A1709AB827D3414E002D21AE /* UI+Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				A11F5EF127D3E65C00FBF3C9 /* UIImageView+Extention .swift */,
 				A11F5E6F27D3CE0100FBF3C9 /* UILabel+Extention .swift */,
 				A11F5E6527D3B2E700FBF3C9 /* UIView+Extention.swift */,
 				A1709C3027D3550F002D21AE /* UINavigationController+Extentions.swift */,
@@ -1028,6 +1034,7 @@
 				A11F5E7027D3CE0100FBF3C9 /* UILabel+Extention .swift in Sources */,
 				A1709C5627D35718002D21AE /* WeatherListHandler.swift in Sources */,
 				A1709C7727D35718002D21AE /* AddCitiesViewController.swift in Sources */,
+				A11F5EF227D3E65C00FBF3C9 /* UIImageView+Extention .swift in Sources */,
 				A11F5E6E27D3B7DF00FBF3C9 /* WebServiceMangerHandlerProtocol.swift in Sources */,
 				A17099FE27D33320002D21AE /* PlanRaderTask.xcdatamodeld in Sources */,
 				A1709C2F27D354CB002D21AE /* ProgressHUD.swift in Sources */,
@@ -1055,6 +1062,7 @@
 				A1709CA827D3588A002D21AE /* WeatherImageEnum.swift in Sources */,
 				A1709CCD27D35A82002D21AE /* AddCitiesCell.swift in Sources */,
 				A1709C6827D35718002D21AE /* WeatherDetailViewModelProtocol.swift in Sources */,
+				A11F5EF027D3E5F400FBF3C9 /* CustomImage.swift in Sources */,
 				A1709BFE27D352D9002D21AE /* WebServiceProtocol.swift in Sources */,
 				A1709A7127D3392F002D21AE /* Animation.swift in Sources */,
 				A1709C9F27D3588A002D21AE /* CityListModel.swift in Sources */,

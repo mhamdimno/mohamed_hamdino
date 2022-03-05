@@ -6,11 +6,14 @@
 //  Copyright © 2021 A One Way To Allah. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension String{
-    var decodeUrl : String
-    {
+    var decodeUrl : String{
         return self.removingPercentEncoding ?? ""
+    }
+    
+    var toImage:UIImage{
+        return UIImage(named: self) ?? UIImage()
     }
 }

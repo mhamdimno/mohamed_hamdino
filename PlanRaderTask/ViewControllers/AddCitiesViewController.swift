@@ -104,7 +104,7 @@ extension AddCitiesViewController: UISearchBarDelegate {
                 let foundItems = self.cityList.filter { (($0.name?.range(of: strText)) != nil) || $0.id == Int(strText) }
                 self.filteredList =  foundItems
                 self.searchActive = true
-                self.tableView.reloadData()
+         self.tableView.reloadData()
                 self.progressHUD.DismissSVProgressHUD()
             }
         }

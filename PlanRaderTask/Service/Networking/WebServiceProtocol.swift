@@ -9,4 +9,5 @@
 import Foundation
 
 protocol WebServiceProtocol {
+    func fetchData(urlPath: URL?, completion: @escaping ((Result<Data, ErrorResult>) -> Void))
 }
