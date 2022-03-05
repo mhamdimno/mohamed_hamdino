@@ -19,6 +19,13 @@ extension UILabel{
             text=""
         }
     }
+    func setHistorcilInfoData(status: String?,temp:String?){
+        if let status=status{
+            self.text="\(status) \(temp ?? "") C"
+        }else{
+            text=""
+        }
+    }
     func setDescription(_ str: String?){
         if let str=str{
             self.text="\("Description"): \(str)"

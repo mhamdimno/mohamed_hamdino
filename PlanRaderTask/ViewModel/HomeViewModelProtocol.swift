@@ -9,9 +9,10 @@
 
 import Foundation
 
-protocol WeatherListViewModelProtocol {
+protocol HomeViewModelProtocol {
     var weatherList: Dynamic<[City]> { get }
     func addCityToLocal(data:CityListModel)
+    func removeCityFromLocal(data:City)
     var onErrorHandling: ((ErrorResult?) -> Void)? { get set }
     var isFinished: Dynamic<Bool> { get }
 

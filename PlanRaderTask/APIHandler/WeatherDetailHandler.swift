@@ -11,10 +11,6 @@ import Foundation
 
 class WeatherDetailHandler: WeatherDetailHandlerProtocol {
    
-    
-    
-    
-
     private let webServiceHandler: WebServiceProtocol!
 
     init(withWebServiceHandler webServiceHandler: WebServiceProtocol = WebService()) {

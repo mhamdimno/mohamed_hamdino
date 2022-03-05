@@ -14,7 +14,7 @@ extension Date{
     var getTimeStringFromDate : String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .short
+        dateFormatter.timeStyle = .long
         dateFormatter.locale=Locale(identifier: "en")
         let dataString = dateFormatter.string(from: self)
         return dataString

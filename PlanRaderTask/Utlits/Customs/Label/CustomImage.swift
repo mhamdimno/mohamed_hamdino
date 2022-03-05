@@ -21,4 +21,12 @@ class WeatherImage: CustomImage {
     }
     
 }
-
+class HistoryImage: CustomImage {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setHeight(constant: 28)
+        setWidth(constant: 28)
+        tintColor=DesignSystem.Colors.helper.color
+    }
+    
+}

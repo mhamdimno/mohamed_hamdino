@@ -139,7 +139,7 @@ extension UIView{
         tap.numberOfTapsRequired = numberOfTapsRequired
         
         self.addGestureRecognizer(tap)
-    //    self.isUserInteractionEnabled = true
+        self.isUserInteractionEnabled = true
         self.endEditing(true)
 
     }

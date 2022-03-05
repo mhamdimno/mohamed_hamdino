@@ -10,8 +10,8 @@ import UIKit
 class Coordinator {
  
   class func start() {
-        let vc=WeatherTableViewController.instantiateFromXIB()
-        UIApplication.window?.rootViewController=vc.toNavigation
+        //let vc=HomeTableViewController.instantiateFromXIB()
+      //  UIApplication.window?.rootViewController=vc.toNavigation
     }
 
 }

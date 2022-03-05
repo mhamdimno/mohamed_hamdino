@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WeatherTableViewController: UITableViewController, AddCitiesDelegate {
+class HomeTableViewController: UITableViewController, AddCitiesDelegate {
   
     
 
@@ -16,12 +16,12 @@ class WeatherTableViewController: UITableViewController, AddCitiesDelegate {
     enum Segues: String {
         case showDetail = "toDetailViewController"
         case saveAddCity = "toAddCitiesViewController"
-        case settings = "toSettingsViewController"
+        case historical = "toHistoricalViewController"
     }
     var arrayWeather: [City] = [City]()
     var progressHUD: ProgressHUD { return ProgressHUD() }
 
-    var viewModel: WeatherListViewModelProtocol = WeatherListViewModel()
+    var viewModel: HomeViewModelProtocol = HomeViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +58,7 @@ class WeatherTableViewController: UITableViewController, AddCitiesDelegate {
 
     func methodAddCities(_ data: CityListModel) {
         viewModel.addCityToLocal(data: data)
+        
     }
  
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -65,22 +66,35 @@ class WeatherTableViewController: UITableViewController, AddCitiesDelegate {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "WeatherInformationCell", for: indexPath) as? WeatherInformationCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath) as? HomeCell else {
             fatalError("WeatherCell not found")
         }
         cell.WeatherModel = arrayWeather[indexPath.row]
         cell.histoyImageClicked={[self]in
-            
+            self.performSegue(withIdentifier: "toHistoricalViewController", sender: indexPath)
         }
         return cell
     }
 
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            arrayWeather.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            viewModel.removeCityFromLocal(data: arrayWeather[indexPath.row])
+        }
+    }
+    
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "toDetailViewController", sender: indexPath)
+       self.performSegue(withIdentifier: "toDetailViewController", sender: indexPath)
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 55
+        return KtableViewHeight
     }
 
     // MARK: - Navigation
@@ -98,8 +112,8 @@ class WeatherTableViewController: UITableViewController, AddCitiesDelegate {
                 self.prepareSegueForAddWeatherVC(segue: segue)
                 break
 
-            case .settings:
-                self.prepareSegueForSettingsVC(segue: segue)
+            case .historical:
+                self.prepareSegueForHistoricalVC(segue: segue, sender: sender)
                 break
             }
 
@@ -109,7 +123,7 @@ class WeatherTableViewController: UITableViewController, AddCitiesDelegate {
     }
 }
 
-extension WeatherTableViewController {
+extension HomeTableViewController {
 
     private func prepareSegueForWeatherDetailVC(for segue: UIStoryboardSegue, sender: Any?) {
         if
@@ -120,12 +134,13 @@ extension WeatherTableViewController {
         }
     }
 
-    private func prepareSegueForSettingsVC(segue: UIStoryboardSegue) {
+    private func prepareSegueForHistoricalVC(segue: UIStoryboardSegue, sender: Any?) {
         if
+            let indexPath = sender as? IndexPath,
             let navigationController = segue.destination as? UINavigationController,
-            let _ = navigationController.viewControllers.first as? SettingsViewController
+            let vc = navigationController.viewControllers.first as? HistoricalCityViewController
         {
-//            SettingsVc.delegate = self
+            vc.city = self.arrayWeather[indexPath.row]
         } else {
             fatalError("NavigationController not found")
         }

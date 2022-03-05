@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WeatherInformationCell: UITableViewCell {
+class HomeCell: UITableViewCell {
     @IBOutlet weak var labelCityName: UILabel!
     @IBOutlet weak var histoyImage: UIImageView!
     var histoyImageClicked: (()->())?
@@ -18,8 +18,7 @@ class WeatherInformationCell: UITableViewCell {
             guard let data = WeatherModel else {
                 return
             }
-            labelCityName.text = data.name
-            //labelCityTemperature.text = "\(data.temp ?? 0) °C"
+            labelCityName.set(data.name)
         }
     }
 

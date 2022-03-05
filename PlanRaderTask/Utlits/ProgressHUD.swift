@@ -21,21 +21,19 @@ class ProgressHUD {
 extension ProgressHUD: Progressing {
 
     func ShowSVProgressHUD_White() {
-//        UIApplication.shared.beginIgnoringInteractionEvents()
-//        SVProgressHUD.show()
+        SVProgressHUD.show()
     }
 
     func ShowSVProgressHUD_Black() {
-//        UIApplication.shared.beginIgnoringInteractionEvents()
-//        SVProgressHUD.show()
-//        SVProgressHUD.setDefaultStyle(SVProgressHUDStyle.custom)
-//        SVProgressHUD.setBackgroundColor( UIColor.black.withAlphaComponent(0.4))
-//        SVProgressHUD.setForegroundColor( .white)
-//        SVProgressHUD.setRingThickness( 1.0)
+        SVProgressHUD.show()
+        SVProgressHUD.setDefaultStyle(SVProgressHUDStyle.custom)
+        SVProgressHUD.setBackgroundColor( UIColor.black.withAlphaComponent(0.4))
+        SVProgressHUD.setForegroundColor(DesignSystem.Colors.primary.color)
+        SVProgressHUD.setRingThickness( 1.0)
     }
 
     func DismissSVProgressHUD() {
-//        UIApplication.shared.endIgnoringInteractionEvents()
-//        SVProgressHUD.dismiss()
+        UIApplication.shared.endIgnoringInteractionEvents()
+        SVProgressHUD.dismiss()
     }
 }

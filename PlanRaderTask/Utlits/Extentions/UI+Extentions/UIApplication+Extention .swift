@@ -24,15 +24,15 @@ extension UIApplication {
         return UIApplication.shared.delegate as! AppDelegate
     }
     
-    var sceneDelegate: SceneDelegate? {
-        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-              let delegate = windowScene.delegate as? SceneDelegate else { return nil }
-        return delegate
-    }
-  class var window: UIWindow? {
-            guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-                  let delegate = windowScene.delegate as? SceneDelegate, let window = delegate.window else { return nil }
-            return window
-    }
+//    var sceneDelegate: SceneDelegate? {
+//        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+//              let delegate = windowScene.delegate as? SceneDelegate else { return nil }
+//        return delegate
+//    }
+//  class var window: UIWindow? {
+//            guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+//                  let delegate = windowScene.delegate as? SceneDelegate, let window = delegate.window else { return nil }
+//            return window
+//    }
 
 }

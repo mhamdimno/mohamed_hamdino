@@ -12,6 +12,7 @@ class TitleLabel: CustomLabel {
     override func awakeFromNib() {
         super.awakeFromNib()
         font = DesignSystem.Typography.title.font
+       self.setProberties(txtColor: DesignSystem.Colors.primary.color)
     }
     
 }

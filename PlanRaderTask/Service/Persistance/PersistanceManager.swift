@@ -23,19 +23,26 @@ class PersistanceManager {
         return container
     }()
     
-    func setCity(data: CityListModel?) {
+    func setCity(data: CityListModel?,weatherInformation: WeatherInformation?) {
+        print("🙄name \(data?.name)")
+        print("🙄deg \(weatherInformation?.wind?.deg)")
+
        let city = City(context: persistentContainer.viewContext)
         city.id = Int64(data?.id ?? 0)
         city.name = data?.name ?? ""
         save()
+        setWeatherInfo(weatherInformation: weatherInformation, city: city)
+        save()
     }
     
-    func setWeatherInfo(id: Int?, degree: String?, date: String?,statue:String?, city: City) {
+    func setWeatherInfo(weatherInformation: WeatherInformation?, city: City) {
         let weatherInfo = WeatherInfo(context: persistentContainer.viewContext)
-        weatherInfo.id = Int64(id ?? 0)
-        weatherInfo.degree = degree ?? ""
-        weatherInfo.date = date ?? ""
-        weatherInfo.statue = statue ?? ""
+        let currentDate=Date()
+        weatherInfo.date = currentDate.getTimeStringFromDate
+
+        weatherInfo.id = Int64(weatherInformation?.id ?? 0)
+        weatherInfo.degree = "\(weatherInformation?.main?.temp ?? 0)"
+        weatherInfo.statue = weatherInformation?.weather?[0].main ?? ""
         weatherInfo.city = city
         save()
     }
@@ -67,7 +74,7 @@ class PersistanceManager {
         
         request.predicate = NSPredicate(format: "(city = %@)", city)
         
-        request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+       // request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
         
         var weatherInfos: [WeatherInfo] = []
         
