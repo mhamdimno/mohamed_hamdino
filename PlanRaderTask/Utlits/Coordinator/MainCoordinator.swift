@@ -13,6 +13,5 @@ class Coordinator {
         let vc=WeatherTableViewController.instantiateFromXIB()
         UIApplication.window?.rootViewController=vc.toNavigation
     }
-    
 
 }
