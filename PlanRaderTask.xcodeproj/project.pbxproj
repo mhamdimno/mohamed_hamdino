@@ -21,6 +21,36 @@
 		A1709A2A27D33410002D21AE /* CityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1709A2827D33410002D21AE /* CityCell.xib */; };
 		A1709A2E27D33514002D21AE /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1709A2D27D33514002D21AE /* Colors.xcassets */; };
 		A1709A3127D33647002D21AE /* CitiesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709A3027D33647002D21AE /* CitiesTVC.swift */; };
+		A1709A6E27D3392F002D21AE /* AnimationTiming.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709A6327D3392F002D21AE /* AnimationTiming.swift */; };
+		A1709A6F27D3392F002D21AE /* AnimationTiming.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709A6327D3392F002D21AE /* AnimationTiming.swift */; };
+		A1709A7027D3392F002D21AE /* AnimationTiming.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709A6327D3392F002D21AE /* AnimationTiming.swift */; };
+		A1709A7127D3392F002D21AE /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709A6427D3392F002D21AE /* Animation.swift */; };
+		A1709A7227D3392F002D21AE /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709A6427D3392F002D21AE /* Animation.swift */; };
+		A1709A7327D3392F002D21AE /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709A6427D3392F002D21AE /* Animation.swift */; };
+		A1709A7727D3392F002D21AE /* AnimationDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709A6627D3392F002D21AE /* AnimationDuration.swift */; };
+		A1709A7827D3392F002D21AE /* AnimationDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709A6627D3392F002D21AE /* AnimationDuration.swift */; };
+		A1709A7927D3392F002D21AE /* AnimationDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709A6627D3392F002D21AE /* AnimationDuration.swift */; };
+		A1709A7A27D3392F002D21AE /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709A6727D3392F002D21AE /* DesignSystem.swift */; };
+		A1709A7B27D3392F002D21AE /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709A6727D3392F002D21AE /* DesignSystem.swift */; };
+		A1709A7C27D3392F002D21AE /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709A6727D3392F002D21AE /* DesignSystem.swift */; };
+		A1709A7D27D3392F002D21AE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709A6927D3392F002D21AE /* Colors.swift */; };
+		A1709A7E27D3392F002D21AE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709A6927D3392F002D21AE /* Colors.swift */; };
+		A1709A7F27D3392F002D21AE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709A6927D3392F002D21AE /* Colors.swift */; };
+		A1709A8027D3392F002D21AE /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709A6B27D3392F002D21AE /* Typography.swift */; };
+		A1709A8127D3392F002D21AE /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709A6B27D3392F002D21AE /* Typography.swift */; };
+		A1709A8227D3392F002D21AE /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709A6B27D3392F002D21AE /* Typography.swift */; };
+		A1709A8327D3392F002D21AE /* CustomFontDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709A6C27D3392F002D21AE /* CustomFontDescriptor.swift */; };
+		A1709A8427D3392F002D21AE /* CustomFontDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709A6C27D3392F002D21AE /* CustomFontDescriptor.swift */; };
+		A1709A8527D3392F002D21AE /* CustomFontDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709A6C27D3392F002D21AE /* CustomFontDescriptor.swift */; };
+		A1709A8627D3392F002D21AE /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709A6D27D3392F002D21AE /* Font.swift */; };
+		A1709A8727D3392F002D21AE /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709A6D27D3392F002D21AE /* Font.swift */; };
+		A1709A8827D3392F002D21AE /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709A6D27D3392F002D21AE /* Font.swift */; };
+		A1709A8C27D3399F002D21AE /* Bahij_TheSansArabic-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1709A8A27D3399F002D21AE /* Bahij_TheSansArabic-SemiBold.ttf */; };
+		A1709A8D27D3399F002D21AE /* Bahij_TheSansArabic-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1709A8A27D3399F002D21AE /* Bahij_TheSansArabic-SemiBold.ttf */; };
+		A1709A8E27D3399F002D21AE /* Bahij_TheSansArabic-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1709A8A27D3399F002D21AE /* Bahij_TheSansArabic-SemiBold.ttf */; };
+		A1709A8F27D3399F002D21AE /* Bahij_TheSansArabic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1709A8B27D3399F002D21AE /* Bahij_TheSansArabic-Bold.ttf */; };
+		A1709A9027D3399F002D21AE /* Bahij_TheSansArabic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1709A8B27D3399F002D21AE /* Bahij_TheSansArabic-Bold.ttf */; };
+		A1709A9127D3399F002D21AE /* Bahij_TheSansArabic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1709A8B27D3399F002D21AE /* Bahij_TheSansArabic-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +89,16 @@
 		A1709A2827D33410002D21AE /* CityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityCell.xib; sourceTree = "<group>"; };
 		A1709A2D27D33514002D21AE /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		A1709A3027D33647002D21AE /* CitiesTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesTVC.swift; sourceTree = "<group>"; };
+		A1709A6327D3392F002D21AE /* AnimationTiming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationTiming.swift; sourceTree = "<group>"; };
+		A1709A6427D3392F002D21AE /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		A1709A6627D3392F002D21AE /* AnimationDuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationDuration.swift; sourceTree = "<group>"; };
+		A1709A6727D3392F002D21AE /* DesignSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
+		A1709A6927D3392F002D21AE /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		A1709A6B27D3392F002D21AE /* Typography.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		A1709A6C27D3392F002D21AE /* CustomFontDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFontDescriptor.swift; sourceTree = "<group>"; };
+		A1709A6D27D3392F002D21AE /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		A1709A8A27D3399F002D21AE /* Bahij_TheSansArabic-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bahij_TheSansArabic-SemiBold.ttf"; sourceTree = "<group>"; };
+		A1709A8B27D3399F002D21AE /* Bahij_TheSansArabic-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bahij_TheSansArabic-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,14 +149,11 @@
 		A17099F227D33320002D21AE /* PlanRaderTask */ = {
 			isa = PBXGroup;
 			children = (
-				A1709A2627D333E4002D21AE /* Cities */,
-				A17099F327D33320002D21AE /* AppDelegate.swift */,
-				A17099F527D33320002D21AE /* SceneDelegate.swift */,
+				A1709A3227D336F1002D21AE /* App */,
 				A17099F727D33320002D21AE /* ViewController.swift */,
 				A17099F927D33320002D21AE /* Main.storyboard */,
 				A1709A2C27D334F7002D21AE /* Resourses */,
 				A1709A0127D33324002D21AE /* LaunchScreen.storyboard */,
-				A1709A0427D33324002D21AE /* Info.plist */,
 				A17099FC27D33320002D21AE /* PlanRaderTask.xcdatamodeld */,
 			);
 			path = PlanRaderTask;
@@ -160,6 +197,7 @@
 		A1709A2C27D334F7002D21AE /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
+				A1709A8927D3399F002D21AE /* Fonts */,
 				A17099FF27D33324002D21AE /* Assets.xcassets */,
 				A1709A2D27D33514002D21AE /* Colors.xcassets */,
 			);
@@ -172,6 +210,74 @@
 				A1709A3027D33647002D21AE /* CitiesTVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		A1709A3227D336F1002D21AE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A1709A9227D33A07002D21AE /* Application */,
+				A1709A6127D3392F002D21AE /* DesignSystem */,
+				A1709A2627D333E4002D21AE /* Cities */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A1709A6127D3392F002D21AE /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				A1709A6227D3392F002D21AE /* Animation */,
+				A1709A6727D3392F002D21AE /* DesignSystem.swift */,
+				A1709A6827D3392F002D21AE /* Colors */,
+				A1709A6A27D3392F002D21AE /* Typography */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		A1709A6227D3392F002D21AE /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				A1709A6327D3392F002D21AE /* AnimationTiming.swift */,
+				A1709A6427D3392F002D21AE /* Animation.swift */,
+				A1709A6627D3392F002D21AE /* AnimationDuration.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		A1709A6827D3392F002D21AE /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				A1709A6927D3392F002D21AE /* Colors.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		A1709A6A27D3392F002D21AE /* Typography */ = {
+			isa = PBXGroup;
+			children = (
+				A1709A6B27D3392F002D21AE /* Typography.swift */,
+				A1709A6C27D3392F002D21AE /* CustomFontDescriptor.swift */,
+				A1709A6D27D3392F002D21AE /* Font.swift */,
+			);
+			path = Typography;
+			sourceTree = "<group>";
+		};
+		A1709A8927D3399F002D21AE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A1709A8A27D3399F002D21AE /* Bahij_TheSansArabic-SemiBold.ttf */,
+				A1709A8B27D3399F002D21AE /* Bahij_TheSansArabic-Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		A1709A9227D33A07002D21AE /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				A1709A0427D33324002D21AE /* Info.plist */,
+				A17099F327D33320002D21AE /* AppDelegate.swift */,
+				A17099F527D33320002D21AE /* SceneDelegate.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,7 +388,9 @@
 				A1709A0327D33324002D21AE /* LaunchScreen.storyboard in Resources */,
 				A1709A0027D33324002D21AE /* Assets.xcassets in Resources */,
 				A1709A2A27D33410002D21AE /* CityCell.xib in Resources */,
+				A1709A8C27D3399F002D21AE /* Bahij_TheSansArabic-SemiBold.ttf in Resources */,
 				A17099FB27D33320002D21AE /* Main.storyboard in Resources */,
+				A1709A8F27D3399F002D21AE /* Bahij_TheSansArabic-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +398,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1709A8D27D3399F002D21AE /* Bahij_TheSansArabic-SemiBold.ttf in Resources */,
+				A1709A9027D3399F002D21AE /* Bahij_TheSansArabic-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +407,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1709A8E27D3399F002D21AE /* Bahij_TheSansArabic-SemiBold.ttf in Resources */,
+				A1709A9127D3399F002D21AE /* Bahij_TheSansArabic-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,12 +419,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1709A7727D3392F002D21AE /* AnimationDuration.swift in Sources */,
+				A1709A8327D3392F002D21AE /* CustomFontDescriptor.swift in Sources */,
 				A1709A3127D33647002D21AE /* CitiesTVC.swift in Sources */,
 				A17099F827D33320002D21AE /* ViewController.swift in Sources */,
 				A17099F427D33320002D21AE /* AppDelegate.swift in Sources */,
 				A1709A2927D33410002D21AE /* CityCell.swift in Sources */,
+				A1709A8027D3392F002D21AE /* Typography.swift in Sources */,
 				A17099FE27D33320002D21AE /* PlanRaderTask.xcdatamodeld in Sources */,
+				A1709A6E27D3392F002D21AE /* AnimationTiming.swift in Sources */,
+				A1709A7D27D3392F002D21AE /* Colors.swift in Sources */,
 				A17099F627D33320002D21AE /* SceneDelegate.swift in Sources */,
+				A1709A7127D3392F002D21AE /* Animation.swift in Sources */,
+				A1709A8627D3392F002D21AE /* Font.swift in Sources */,
+				A1709A7A27D3392F002D21AE /* DesignSystem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,7 +440,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1709A7E27D3392F002D21AE /* Colors.swift in Sources */,
+				A1709A8727D3392F002D21AE /* Font.swift in Sources */,
+				A1709A8427D3392F002D21AE /* CustomFontDescriptor.swift in Sources */,
+				A1709A6F27D3392F002D21AE /* AnimationTiming.swift in Sources */,
+				A1709A7B27D3392F002D21AE /* DesignSystem.swift in Sources */,
+				A1709A8127D3392F002D21AE /* Typography.swift in Sources */,
+				A1709A7827D3392F002D21AE /* AnimationDuration.swift in Sources */,
 				A1709A0E27D33325002D21AE /* PlanRaderTaskTests.swift in Sources */,
+				A1709A7227D3392F002D21AE /* Animation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +458,14 @@
 			files = (
 				A1709A1827D33325002D21AE /* PlanRaderTaskUITests.swift in Sources */,
 				A1709A1A27D33325002D21AE /* PlanRaderTaskUITestsLaunchTests.swift in Sources */,
+				A1709A8227D3392F002D21AE /* Typography.swift in Sources */,
+				A1709A8827D3392F002D21AE /* Font.swift in Sources */,
+				A1709A7F27D3392F002D21AE /* Colors.swift in Sources */,
+				A1709A7C27D3392F002D21AE /* DesignSystem.swift in Sources */,
+				A1709A7027D3392F002D21AE /* AnimationTiming.swift in Sources */,
+				A1709A7327D3392F002D21AE /* Animation.swift in Sources */,
+				A1709A7927D3392F002D21AE /* AnimationDuration.swift in Sources */,
+				A1709A8527D3392F002D21AE /* CustomFontDescriptor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
