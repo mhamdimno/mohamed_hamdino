@@ -69,6 +69,9 @@ class WeatherTableViewController: UITableViewController, AddCitiesDelegate {
             fatalError("WeatherCell not found")
         }
         cell.WeatherModel = arrayWeather[indexPath.row]
+        cell.histoyImageClicked={[self]in
+            
+        }
         return cell
     }
 
@@ -113,7 +116,7 @@ extension WeatherTableViewController {
             let indexPath = sender as? IndexPath,
             let controller = segue.destination as? WeatherDetailViewController
         {
-           // controller.weatherData = self.arrayWeather[indexPath.row]
+            controller.weatherData = self.arrayWeather[indexPath.row]
         }
     }
 

@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		3BAF8286D5F36BB82099464C /* Pods_PlanRaderTask_PlanRaderTaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28CA02EF384C842B9075E31B /* Pods_PlanRaderTask_PlanRaderTaskUITests.framework */; };
 		7437D0F611CE6413927829FD /* Pods_PlanRaderTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80150BD6B7DF678F9139C2DA /* Pods_PlanRaderTaskTests.framework */; };
+		A11F5E6627D3B2E700FBF3C9 /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11F5E6527D3B2E700FBF3C9 /* UIView+Extention.swift */; };
+		A11F5E6827D3B77800FBF3C9 /* WebServiceMangerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11F5E6727D3B77800FBF3C9 /* WebServiceMangerHandler.swift */; };
+		A11F5E6927D3B78100FBF3C9 /* WebServiceMangerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11F5E6727D3B77800FBF3C9 /* WebServiceMangerHandler.swift */; };
+		A11F5E6A27D3B78100FBF3C9 /* WebServiceMangerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11F5E6727D3B77800FBF3C9 /* WebServiceMangerHandler.swift */; };
+		A11F5E6E27D3B7DF00FBF3C9 /* WebServiceMangerHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11F5E6D27D3B7DF00FBF3C9 /* WebServiceMangerHandlerProtocol.swift */; };
+		A11F5E7027D3CE0100FBF3C9 /* UILabel+Extention .swift in Sources */ = {isa = PBXBuildFile; fileRef = A11F5E6F27D3CE0100FBF3C9 /* UILabel+Extention .swift */; };
 		A1616E6627D3AA3800142096 /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1616E6527D3AA3700142096 /* PersistanceManager.swift */; };
 		A1616E6727D3AA3800142096 /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1616E6527D3AA3700142096 /* PersistanceManager.swift */; };
 		A1616E6827D3AA3800142096 /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1616E6527D3AA3700142096 /* PersistanceManager.swift */; };
@@ -235,6 +241,10 @@
 		6E1C44E00F9014467E4F80C7 /* Pods-PlanRaderTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlanRaderTaskTests.release.xcconfig"; path = "Target Support Files/Pods-PlanRaderTaskTests/Pods-PlanRaderTaskTests.release.xcconfig"; sourceTree = "<group>"; };
 		7AF36839E8F5D3417EFFE211 /* Pods-PlanRaderTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlanRaderTask.debug.xcconfig"; path = "Target Support Files/Pods-PlanRaderTask/Pods-PlanRaderTask.debug.xcconfig"; sourceTree = "<group>"; };
 		80150BD6B7DF678F9139C2DA /* Pods_PlanRaderTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlanRaderTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A11F5E6527D3B2E700FBF3C9 /* UIView+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extention.swift"; sourceTree = "<group>"; };
+		A11F5E6727D3B77800FBF3C9 /* WebServiceMangerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceMangerHandler.swift; sourceTree = "<group>"; };
+		A11F5E6D27D3B7DF00FBF3C9 /* WebServiceMangerHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceMangerHandlerProtocol.swift; sourceTree = "<group>"; };
+		A11F5E6F27D3CE0100FBF3C9 /* UILabel+Extention .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extention .swift"; sourceTree = "<group>"; };
 		A1616E6527D3AA3700142096 /* PersistanceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistanceManager.swift; sourceTree = "<group>"; };
 		A17099F027D33320002D21AE /* PlanRaderTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanRaderTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A17099F327D33320002D21AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -368,6 +378,24 @@
 				80150BD6B7DF678F9139C2DA /* Pods_PlanRaderTaskTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A11F5E6B27D3B78D00FBF3C9 /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				A1709BF127D352D9002D21AE /* FileManagerHandler.swift */,
+				A11F5E6727D3B77800FBF3C9 /* WebServiceMangerHandler.swift */,
+			);
+			path = Handler;
+			sourceTree = "<group>";
+		};
+		A11F5E6C27D3B7C600FBF3C9 /* HandlerProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				A1709BF427D352D9002D21AE /* FileManagerHandlerProtocol.swift */,
+				A11F5E6D27D3B7DF00FBF3C9 /* WebServiceMangerHandlerProtocol.swift */,
+			);
+			path = HandlerProtocol;
 			sourceTree = "<group>";
 		};
 		A1616E6427D3AA3700142096 /* Persistance */ = {
@@ -555,6 +583,8 @@
 		A1709AB827D3414E002D21AE /* UI+Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				A11F5E6F27D3CE0100FBF3C9 /* UILabel+Extention .swift */,
+				A11F5E6527D3B2E700FBF3C9 /* UIView+Extention.swift */,
 				A1709C3027D3550F002D21AE /* UINavigationController+Extentions.swift */,
 				A1709B6227D341F1002D21AE /* UIViewController+Extentions.swift */,
 				A1709BAB27D342F7002D21AE /* UIApplication+Extention .swift */,
@@ -578,9 +608,9 @@
 				A1616E6427D3AA3700142096 /* Persistance */,
 				A1709BEA27D352D9002D21AE /* Result */,
 				A1709BED27D352D9002D21AE /* Networking */,
-				A1709BF127D352D9002D21AE /* FileManagerHandler.swift */,
+				A11F5E6B27D3B78D00FBF3C9 /* Handler */,
 				A1709BF227D352D9002D21AE /* APIManager */,
-				A1709BF427D352D9002D21AE /* FileManagerHandlerProtocol.swift */,
+				A11F5E6C27D3B7C600FBF3C9 /* HandlerProtocol */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -972,11 +1002,13 @@
 				A1709CB727D3588A002D21AE /* Coord.swift in Sources */,
 				A1709CC127D358E1002D21AE /* UIColor+Extention.swift in Sources */,
 				A1709A8327D3392F002D21AE /* CustomFontDescriptor.swift in Sources */,
+				A11F5E6627D3B2E700FBF3C9 /* UIView+Extention.swift in Sources */,
 				A1709C7D27D35718002D21AE /* SettingsViewController.swift in Sources */,
 				A1709CBA27D3588A002D21AE /* Sys.swift in Sources */,
 				A1709C5C27D35718002D21AE /* WeatherListViewModel.swift in Sources */,
 				A1709BF527D352D9002D21AE /* Result.swift in Sources */,
 				A1709B6727D34259002D21AE /* Constans.swift in Sources */,
+				A11F5E6827D3B77800FBF3C9 /* WebServiceMangerHandler.swift in Sources */,
 				A1709CAE27D3588A002D21AE /* Weather.swift in Sources */,
 				A1709C5027D35718002D21AE /* WeatherDetailHandler.swift in Sources */,
 				A1709C2B27D35472002D21AE /* Date+Extention .swift in Sources */,
@@ -989,8 +1021,10 @@
 				A1709C5F27D35718002D21AE /* SettingsViewModel.swift in Sources */,
 				A1709A8027D3392F002D21AE /* Typography.swift in Sources */,
 				A1709C0727D352D9002D21AE /* APIManager.swift in Sources */,
+				A11F5E7027D3CE0100FBF3C9 /* UILabel+Extention .swift in Sources */,
 				A1709C5627D35718002D21AE /* WeatherListHandler.swift in Sources */,
 				A1709C7727D35718002D21AE /* AddCitiesViewController.swift in Sources */,
+				A11F5E6E27D3B7DF00FBF3C9 /* WebServiceMangerHandlerProtocol.swift in Sources */,
 				A17099FE27D33320002D21AE /* PlanRaderTask.xcdatamodeld in Sources */,
 				A1709C2F27D354CB002D21AE /* ProgressHUD.swift in Sources */,
 				A1709C7A27D35718002D21AE /* WeatherTableViewController.swift in Sources */,
@@ -1043,6 +1077,7 @@
 				A1709A7E27D3392F002D21AE /* Colors.swift in Sources */,
 				A1709A8727D3392F002D21AE /* Font.swift in Sources */,
 				A1709C7827D35718002D21AE /* AddCitiesViewController.swift in Sources */,
+				A11F5E6A27D3B78100FBF3C9 /* WebServiceMangerHandler.swift in Sources */,
 				A1709BB127D3434D002D21AE /* UIWindow+Extention .swift in Sources */,
 				A1709B6827D34259002D21AE /* Constans.swift in Sources */,
 				A1709C6627D35718002D21AE /* WeatherListViewModelProtocol.swift in Sources */,
@@ -1129,6 +1164,7 @@
 				A1709C6127D35718002D21AE /* SettingsViewModel.swift in Sources */,
 				A1709C0927D352D9002D21AE /* APIManager.swift in Sources */,
 				A1709C4F27D35718002D21AE /* CityListHandler.swift in Sources */,
+				A11F5E6927D3B78100FBF3C9 /* WebServiceMangerHandler.swift in Sources */,
 				A1709A7F27D3392F002D21AE /* Colors.swift in Sources */,
 				A1709CB627D3588A002D21AE /* Main.swift in Sources */,
 				A1709A7C27D3392F002D21AE /* DesignSystem.swift in Sources */,

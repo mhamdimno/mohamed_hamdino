@@ -9,5 +9,5 @@
 import Foundation
 
 protocol WebServiceProtocol {
-    func load<T>(resource: Resource<T>, completion: @escaping (T?) -> Void)
+    func fetchCityWeatherInfo(city: City, completion: @escaping ((Result<WeatherInformation, ErrorResult>) -> Void))
 }

@@ -8,31 +8,28 @@
 
 import Foundation
 import AFNetworking
-struct Resource<T> {
-    let url: URL
-    let parse: (Data) -> T?
-}
+
 
 class WebService: WebServiceProtocol {
-    func load<T>(resource: Resource<T>, completion: @escaping (T?) -> Void) {
-        print("url :", resource.url)
+    
+    func fetchCityWeatherInfo(city: City, completion: @escaping ((Result<WeatherInformation, ErrorResult>) -> Void)) {
         let manager = AFHTTPSessionManager()
         manager.responseSerializer = AFHTTPResponseSerializer()
-        manager.get(resource.url.description, parameters: nil, headers: nil, progress: nil, success: { task, object in
+        manager.get(APIManager.brisbaneURL.description, parameters: nil, headers: nil, progress: nil, success: { task, object in
             guard let data = object as? Data else {
-                //fail cast
-                completion(nil)
+                completion(.failure(.parser(string: "Error while parsing APIs")))
                 return }
-            //success resonse
-            DispatchQueue.main.async {
-                completion(resource.parse(data))
+            do {
+                let model = try JSONDecoder().decode(WeatherInformation.self, from: data)
+                completion(.success(model))
+            } catch {
+                completion(.failure(.parser(string: "Error while parsing json data")))
             }
         }, failure: { task, error in
-            //fail resonse
-                completion(nil)
+            completion(.failure(.parser(string: "InValid ApiKey")))
         })
-        
     }
+   
     
 }
 

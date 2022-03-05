@@ -9,6 +9,8 @@
 import Foundation
 
 protocol WeatherDetailViewModelProtocol {
-    var dataSource: Dynamic<[[DetailModel]]> { get }
     var onErrorHandling: ((ErrorResult?) -> Void)? { get set }
+    var isFinished: Dynamic<Bool> { get }
+    var cityWeather: Dynamic<WeatherInformation> { get }
+
 }

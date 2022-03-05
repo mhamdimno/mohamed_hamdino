@@ -33,7 +33,6 @@ class WeatherListViewModel: WeatherListViewModelProtocol {
                 switch result {
                 case .success(let list) :
                     self?.weatherList.value = list
-
                     break
                 case .failure(let error) :
                     print("Parser error \(error)")

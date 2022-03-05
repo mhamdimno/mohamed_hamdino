@@ -10,29 +10,37 @@ import Foundation
 
 class WeatherDetailViewModel: WeatherDetailViewModelProtocol {
 
-    let dataSource: Dynamic<[[DetailModel]]>
+    let cityWeather: Dynamic<WeatherInformation>
     var onErrorHandling: ((ErrorResult?) -> Void)?
+    let isFinished: Dynamic<Bool>
 
     private let weatherDetailHandler: WeatherDetailHandlerProtocol!
-    private let weatherInfo: WeatherInformation?
+    private let city:City?
 
-    init(withCityListHandler weatherDetailHandler: WeatherDetailHandlerProtocol = WeatherDetailHandler(), withWeatherInformation weatherInfo: WeatherInformation?) {
+    init(withCityListHandler weatherDetailHandler: WeatherDetailHandlerProtocol = WeatherDetailHandler(), withWeatherInformation city: City?) {
         self.weatherDetailHandler = weatherDetailHandler
-        self.weatherInfo = weatherInfo
-
-        self.dataSource = Dynamic([[]])
-        self.fetchWeatherInfo()
+        self.city = city
+        self.isFinished = Dynamic(false)
+        self.cityWeather = Dynamic(WeatherInformation())
+        self.fetchCityWeatherInfo()
     }
 
-    private func fetchWeatherInfo() {
-        if let weatherInfo = self.weatherInfo {
-            self.weatherDetailHandler.fetchWeatherInfo(withWeatherInfo: weatherInfo) { [weak self] result in
-                DispatchQueue.main.async {
-                    switch result {
-                    case .success(let info):
-                        self?.dataSource.value = info
-                    case .failure(let error):
-                        self?.onErrorHandling?(error)
+    private func fetchCityWeatherInfo() {
+        if let city = self.city {
+            DispatchQueue.global(qos: .userInteractive).async {
+                self.weatherDetailHandler.fetchCityWeatherInfo(withCity: city) { [weak self] result in
+                    DispatchQueue.main.async {
+                        self?.isFinished.value = true
+                        switch result {
+                        case .success(let model) :
+                            self?.cityWeather.value = model
+                            break
+                        case .failure(let error) :
+                            print("Parser error \(error)")
+                            self?.isFinished.value = true
+                            self?.onErrorHandling?(error)
+                            break
+                        }
                     }
                 }
             }

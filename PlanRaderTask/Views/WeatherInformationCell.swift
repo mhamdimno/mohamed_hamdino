@@ -10,8 +10,9 @@ import UIKit
 
 class WeatherInformationCell: UITableViewCell {
     @IBOutlet weak var labelCityName: UILabel!
-    @IBOutlet weak var labelCityTemperature: UILabel!
-
+    @IBOutlet weak var histoyImage: UIImageView!
+    var histoyImageClicked: (()->())?
+    
     var WeatherModel: City? {
         didSet {
             guard let data = WeatherModel else {
@@ -24,5 +25,9 @@ class WeatherInformationCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        self.histoyImage.addTapGesture { [ self] in
+            self.histoyImageClicked?()
+        }
     }
 }
