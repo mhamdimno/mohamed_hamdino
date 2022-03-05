@@ -9,9 +9,7 @@
 import UIKit
 
 class WeatherTableViewController: UITableViewController, AddCitiesDelegate {
-    func methodAddCities(_ data: CityListModel) {
-        
-    }
+  
     
 
     // MARK: - Segues
@@ -58,7 +56,9 @@ class WeatherTableViewController: UITableViewController, AddCitiesDelegate {
         self.tableView.tableFooterView = UIView(frame: CGRect.zero)
     }
 
-   
+    func methodAddCities(_ data: CityListModel) {
+        viewModel.addCityToLocal(data: data)
+    }
  
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.arrayWeather.count

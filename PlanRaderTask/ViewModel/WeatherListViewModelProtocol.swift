@@ -11,7 +11,7 @@ import Foundation
 
 protocol WeatherListViewModelProtocol {
     var weatherList: Dynamic<[City]> { get }
-    func addCityToLocal(model:City)
+    func addCityToLocal(data:CityListModel)
     var onErrorHandling: ((ErrorResult?) -> Void)? { get set }
     var isFinished: Dynamic<Bool> { get }
 

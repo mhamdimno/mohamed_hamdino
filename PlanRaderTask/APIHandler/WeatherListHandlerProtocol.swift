@@ -10,4 +10,5 @@ import Foundation
 
 protocol WeatherListHandlerProtocol {
     func fetchCitiesFromStorge(completion: @escaping ((Result<[City], ErrorResult>) -> Void))
+    func addCitytoStorge(data: CityListModel, completion: @escaping ((Result<Bool, ErrorResult>) -> Void))
 }

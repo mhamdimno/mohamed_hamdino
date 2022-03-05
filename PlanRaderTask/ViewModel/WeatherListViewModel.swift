@@ -45,7 +45,21 @@ class WeatherListViewModel: WeatherListViewModelProtocol {
         }
     }
 
-    func addCityToLocal(model: City){
-        self.fetchCityInfo()
+    func addCityToLocal(data: CityListModel){
+        DispatchQueue.global(qos: .userInteractive).async {
+            self.weatherListHandler.addCitytoStorge(data: data){ [weak self] result in
+                self?.isFinished.value = true
+                switch result {
+                case .success(_) :
+                    self?.fetchCityInfo()
+                    break
+                case .failure(let error) :
+                    print("Parser error \(error)")
+                    self?.isFinished.value = true
+                    self?.onErrorHandling?(error)
+                    break
+                }
+            }
+        }
     }
 }

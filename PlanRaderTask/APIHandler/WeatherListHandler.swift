@@ -9,11 +9,15 @@
 import UIKit
 
 class WeatherListHandler: WeatherListHandlerProtocol {
+    
     func fetchCitiesFromStorge(completion: @escaping ((Result<[City], ErrorResult>) -> Void)) {
         let weatherList = PersistanceManager.shared.fetchCitys()
         completion(.success(weatherList))
     }
-
+    func addCitytoStorge(data:CityListModel,completion: @escaping ((Result<Bool, ErrorResult>) -> Void)) {
+        PersistanceManager.shared.setCity(data: data)
+        completion(.success(true))
+    }
     init() {
 
     }
