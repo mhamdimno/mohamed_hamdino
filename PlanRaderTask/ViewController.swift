@@ -1,0 +1,19 @@
+//
+//  ViewController.swift
+//  PlanRaderTask
+//
+//  Created by A One Way To Allah on 05/03/2022.
+//
+
+import UIKit
+
+class ViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+
+
+}
+
