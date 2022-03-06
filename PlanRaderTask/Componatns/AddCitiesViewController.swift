@@ -16,19 +16,20 @@ protocol AddCitiesDelegate {
 class AddCitiesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
-
+    
     var cityList: [CityListModel] = [CityListModel]()
     var filteredList: [CityListModel] = [CityListModel]()
     var delegate: AddCitiesDelegate?
     var searchActive: Bool = false
     var progressHUD: ProgressHUD { return ProgressHUD() }
 
-    var viewModel: AddCityViewModelProtocol = AddCityViewModel()
+    var viewModel: AddCityViewModelProtocol!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUI()
         self.setupViewModel()
+        viewModel=AddCityViewModel(vc:self)
     }
 
     func setupViewModel() {
@@ -132,11 +133,7 @@ extension AddCitiesViewController: UITableViewDataSource {
 
 extension AddCitiesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        if let cell = tableView.cellForRow(at: indexPath) {
-//            cell.accessoryType = .checkmark
-//        }
-
-        let city = filteredList[indexPath.row]
+     let city = filteredList[indexPath.row]
         if let delegate = self.delegate {
             delegate.methodAddCities(city)
             self.dismiss(animated: true)

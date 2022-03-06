@@ -9,3 +9,4 @@ import Foundation
 import UIKit
 let LdelayDurationStart=2.0
 let KtableViewHeight:CGFloat=55
+let KdurnationAnimation=2.0

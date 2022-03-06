@@ -4,9 +4,13 @@
 
   Created by A One Way To Allah on 05/03/2022.
   
-Mohamed Hamdino WatherApp
+Mohamed Hamdino WatherAppTask
 *Use Design Systems for colors,fonts,animation
-*Use Splash As Startes And Use Scences Every Scenes With Xip To Avoid storyboard Conflict in get and better perrformance
-*Use Custom Labels For Apple Design Sysytem Standart Than EveyCoponant In Xib Has CLass For Easy Refactoring
+*Use Custom Labels For Apple Design Sysytem Standart Than EveyCoponant
+*MVVM With Clousre Observble Generic
+*CoreData Relation One To Many
+*Extentions For Clean Code
+*Simple Objective C Code
+*Unit Test
  
 */

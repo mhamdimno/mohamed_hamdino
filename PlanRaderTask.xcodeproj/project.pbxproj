@@ -26,6 +26,7 @@
 		A11F5F0527D42B5F00FBF3C9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A11F5F0427D42B5F00FBF3C9 /* ViewController.m */; };
 		A11F5F0727D4320E00FBF3C9 /* HistoricalCityHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11F5F0627D4320E00FBF3C9 /* HistoricalCityHandler.swift */; };
 		A11F5F0927D4321F00FBF3C9 /* HistoricalCityHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11F5F0827D4321F00FBF3C9 /* HistoricalCityHandlerProtocol.swift */; };
+		A11F5F0B27D438D500FBF3C9 /* UINavigationBar+Extention .swift in Sources */ = {isa = PBXBuildFile; fileRef = A11F5F0A27D438D500FBF3C9 /* UINavigationBar+Extention .swift */; };
 		A1616E6627D3AA3800142096 /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1616E6527D3AA3700142096 /* PersistanceManager.swift */; };
 		A1616E6727D3AA3800142096 /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1616E6527D3AA3700142096 /* PersistanceManager.swift */; };
 		A1616E6827D3AA3800142096 /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1616E6527D3AA3700142096 /* PersistanceManager.swift */; };
@@ -140,9 +141,6 @@
 		A1709C5C27D35718002D21AE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709C3D27D35718002D21AE /* HomeViewModel.swift */; };
 		A1709C5D27D35718002D21AE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709C3D27D35718002D21AE /* HomeViewModel.swift */; };
 		A1709C5E27D35718002D21AE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709C3D27D35718002D21AE /* HomeViewModel.swift */; };
-		A1709C5F27D35718002D21AE /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709C3E27D35718002D21AE /* SettingsViewModel.swift */; };
-		A1709C6027D35718002D21AE /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709C3E27D35718002D21AE /* SettingsViewModel.swift */; };
-		A1709C6127D35718002D21AE /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709C3E27D35718002D21AE /* SettingsViewModel.swift */; };
 		A1709C6227D35718002D21AE /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709C3F27D35718002D21AE /* Dynamic.swift */; };
 		A1709C6327D35718002D21AE /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709C3F27D35718002D21AE /* Dynamic.swift */; };
 		A1709C6427D35718002D21AE /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709C3F27D35718002D21AE /* Dynamic.swift */; };
@@ -170,9 +168,6 @@
 		A1709C7A27D35718002D21AE /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709C4827D35718002D21AE /* HomeTableViewController.swift */; };
 		A1709C7B27D35718002D21AE /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709C4827D35718002D21AE /* HomeTableViewController.swift */; };
 		A1709C7C27D35718002D21AE /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709C4827D35718002D21AE /* HomeTableViewController.swift */; };
-		A1709C7D27D35718002D21AE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709C4927D35718002D21AE /* SettingsViewController.swift */; };
-		A1709C7E27D35718002D21AE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709C4927D35718002D21AE /* SettingsViewController.swift */; };
-		A1709C7F27D35718002D21AE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709C4927D35718002D21AE /* SettingsViewController.swift */; };
 		A1709C9F27D3588A002D21AE /* CityListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709C9427D3588A002D21AE /* CityListModel.swift */; };
 		A1709CA027D3588A002D21AE /* CityListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709C9427D3588A002D21AE /* CityListModel.swift */; };
 		A1709CA127D3588A002D21AE /* CityListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709C9427D3588A002D21AE /* CityListModel.swift */; };
@@ -212,12 +207,6 @@
 		A1709CCD27D35A82002D21AE /* AddCitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709CC627D35A82002D21AE /* AddCitiesCell.swift */; };
 		A1709CCE27D35A82002D21AE /* AddCitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709CC627D35A82002D21AE /* AddCitiesCell.swift */; };
 		A1709CCF27D35A82002D21AE /* AddCitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709CC627D35A82002D21AE /* AddCitiesCell.swift */; };
-		A1709CD027D35A82002D21AE /* WeatherDetailTemperatureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709CC727D35A82002D21AE /* WeatherDetailTemperatureCell.swift */; };
-		A1709CD127D35A82002D21AE /* WeatherDetailTemperatureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709CC727D35A82002D21AE /* WeatherDetailTemperatureCell.swift */; };
-		A1709CD227D35A82002D21AE /* WeatherDetailTemperatureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709CC727D35A82002D21AE /* WeatherDetailTemperatureCell.swift */; };
-		A1709CD327D35A82002D21AE /* WeatherDetailOthersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709CC827D35A82002D21AE /* WeatherDetailOthersCell.swift */; };
-		A1709CD427D35A82002D21AE /* WeatherDetailOthersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709CC827D35A82002D21AE /* WeatherDetailOthersCell.swift */; };
-		A1709CD527D35A82002D21AE /* WeatherDetailOthersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709CC827D35A82002D21AE /* WeatherDetailOthersCell.swift */; };
 		A1709CD627D35A82002D21AE /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709CC927D35A82002D21AE /* HomeCell.swift */; };
 		A1709CD727D35A82002D21AE /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709CC927D35A82002D21AE /* HomeCell.swift */; };
 		A1709CD827D35A82002D21AE /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1709CC927D35A82002D21AE /* HomeCell.swift */; };
@@ -268,6 +257,7 @@
 		A11F5F0427D42B5F00FBF3C9 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A11F5F0627D4320E00FBF3C9 /* HistoricalCityHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalCityHandler.swift; sourceTree = "<group>"; };
 		A11F5F0827D4321F00FBF3C9 /* HistoricalCityHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalCityHandlerProtocol.swift; sourceTree = "<group>"; };
+		A11F5F0A27D438D500FBF3C9 /* UINavigationBar+Extention .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Extention .swift"; sourceTree = "<group>"; };
 		A1616E6527D3AA3700142096 /* PersistanceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistanceManager.swift; sourceTree = "<group>"; };
 		A17099F027D33320002D21AE /* PlanRaderTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanRaderTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A17099F327D33320002D21AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -318,7 +308,6 @@
 		A1709C3A27D35718002D21AE /* HomeHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeHandler.swift; sourceTree = "<group>"; };
 		A1709C3B27D35718002D21AE /* WeatherDetailHandlerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDetailHandlerProtocol.swift; sourceTree = "<group>"; };
 		A1709C3D27D35718002D21AE /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		A1709C3E27D35718002D21AE /* SettingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		A1709C3F27D35718002D21AE /* Dynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		A1709C4027D35718002D21AE /* HomeViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModelProtocol.swift; sourceTree = "<group>"; };
 		A1709C4127D35718002D21AE /* WeatherDetailViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDetailViewModelProtocol.swift; sourceTree = "<group>"; };
@@ -328,7 +317,6 @@
 		A1709C4627D35718002D21AE /* WeatherDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDetailViewController.swift; sourceTree = "<group>"; };
 		A1709C4727D35718002D21AE /* AddCitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCitiesViewController.swift; sourceTree = "<group>"; };
 		A1709C4827D35718002D21AE /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
-		A1709C4927D35718002D21AE /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A1709C9427D3588A002D21AE /* CityListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityListModel.swift; sourceTree = "<group>"; };
 		A1709C9527D3588A002D21AE /* Wind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
 		A1709C9627D3588A002D21AE /* Clouds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clouds.swift; sourceTree = "<group>"; };
@@ -342,8 +330,6 @@
 		A1709C9E27D3588A002D21AE /* DetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
 		A1709CC027D358E1002D21AE /* UIColor+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extention.swift"; sourceTree = "<group>"; };
 		A1709CC627D35A82002D21AE /* AddCitiesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCitiesCell.swift; sourceTree = "<group>"; };
-		A1709CC727D35A82002D21AE /* WeatherDetailTemperatureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDetailTemperatureCell.swift; sourceTree = "<group>"; };
-		A1709CC827D35A82002D21AE /* WeatherDetailOthersCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDetailOthersCell.swift; sourceTree = "<group>"; };
 		A1709CC927D35A82002D21AE /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		A1709CDD27D35AC2002D21AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C2A12EA4F89D9AE4B8CEC60A /* Pods_PlanRaderTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlanRaderTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -431,9 +417,71 @@
 			path = "Objective C";
 			sourceTree = "<group>";
 		};
+		A11F5F0C27D4396300FBF3C9 /* Componatns */ = {
+			isa = PBXGroup;
+			children = (
+				A11F5F1127D43A1F00FBF3C9 /* Historical */,
+				A11F5F1027D439EF00FBF3C9 /* Details */,
+				A11F5F0F27D439D100FBF3C9 /* AddCity */,
+				A11F5F0E27D439BE00FBF3C9 /* Home */,
+			);
+			path = Componatns;
+			sourceTree = "<group>";
+		};
+		A11F5F0E27D439BE00FBF3C9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A1709C3D27D35718002D21AE /* HomeViewModel.swift */,
+				A1709C3927D35718002D21AE /* HomeHandlerProtocol.swift */,
+				A1709C3A27D35718002D21AE /* HomeHandler.swift */,
+				A1709CC927D35A82002D21AE /* HomeCell.swift */,
+				A1709C4827D35718002D21AE /* HomeTableViewController.swift */,
+				A1709C4027D35718002D21AE /* HomeViewModelProtocol.swift */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		A11F5F0F27D439D100FBF3C9 /* AddCity */ = {
+			isa = PBXGroup;
+			children = (
+				A1709C3627D35718002D21AE /* CityListHandlerProtocol.swift */,
+				A1709C3727D35718002D21AE /* CityListHandler.swift */,
+				A1709CC627D35A82002D21AE /* AddCitiesCell.swift */,
+				A1709C4727D35718002D21AE /* AddCitiesViewController.swift */,
+				A1709C4227D35718002D21AE /* AddCityViewModelProtocol.swift */,
+				A1709C4327D35718002D21AE /* AddCityViewModel.swift */,
+			);
+			name = AddCity;
+			sourceTree = "<group>";
+		};
+		A11F5F1027D439EF00FBF3C9 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				A1709C3827D35718002D21AE /* WeatherDetailHandler.swift */,
+				A1709C3B27D35718002D21AE /* WeatherDetailHandlerProtocol.swift */,
+				A1709C4627D35718002D21AE /* WeatherDetailViewController.swift */,
+				A1709C4127D35718002D21AE /* WeatherDetailViewModelProtocol.swift */,
+				A1709C4427D35718002D21AE /* WeatherDetailViewModel.swift */,
+			);
+			name = Details;
+			sourceTree = "<group>";
+		};
+		A11F5F1127D43A1F00FBF3C9 /* Historical */ = {
+			isa = PBXGroup;
+			children = (
+				A11F5EF927D404DB00FBF3C9 /* HistoricalCityCell.swift */,
+				A11F5F0627D4320E00FBF3C9 /* HistoricalCityHandler.swift */,
+				A11F5F0827D4321F00FBF3C9 /* HistoricalCityHandlerProtocol.swift */,
+				A11F5EF527D3FABD00FBF3C9 /* HistoricalCityViewController.swift */,
+				A11F5EF727D3FACF00FBF3C9 /* HistoricalCityViewModel.swift */,
+			);
+			name = Historical;
+			sourceTree = "<group>";
+		};
 		A1616E6427D3AA3700142096 /* Persistance */ = {
 			isa = PBXGroup;
 			children = (
+				A17099FC27D33320002D21AE /* PlanRaderTask.xcdatamodeld */,
 				A1616E6527D3AA3700142096 /* PersistanceManager.swift */,
 			);
 			path = Persistance;
@@ -464,18 +512,15 @@
 		A17099F227D33320002D21AE /* PlanRaderTask */ = {
 			isa = PBXGroup;
 			children = (
-				A11F5EFF27D4260400FBF3C9 /* Objective C */,
 				A1709A3227D336F1002D21AE /* App */,
 				A1709A9427D33B71002D21AE /* Utlits */,
 				A1709C9227D3588A002D21AE /* Models */,
+				A11F5F0C27D4396300FBF3C9 /* Componatns */,
 				A1709BE927D352D9002D21AE /* Service */,
-				A1709C3527D35718002D21AE /* APIHandler */,
-				A1709CD927D35AC2002D21AE /* Storyboards */,
+				A1616E6427D3AA3700142096 /* Persistance */,
 				A1709CC427D35A82002D21AE /* Views */,
-				A1709C4527D35718002D21AE /* ViewControllers */,
-				A1709C3C27D35718002D21AE /* ViewModel */,
 				A1709A2C27D334F7002D21AE /* Resourses */,
-				A17099FC27D33320002D21AE /* PlanRaderTask.xcdatamodeld */,
+				A11F5EFF27D4260400FBF3C9 /* Objective C */,
 				A1709AB227D33F53002D21AE /* Readme.strings */,
 			);
 			path = PlanRaderTask;
@@ -580,8 +625,8 @@
 			children = (
 				A1709BB427D34797002D21AE /* Coordinator */,
 				A1709AB727D3414E002D21AE /* Extentions */,
-				A1709A9527D33B8B002D21AE /* Customs */,
 				A1709B6627D34259002D21AE /* Constans.swift */,
+				A1709C3F27D35718002D21AE /* Dynamic.swift */,
 				A1709C2E27D354CB002D21AE /* ProgressHUD.swift */,
 			);
 			path = Utlits;
@@ -621,6 +666,7 @@
 				A11F5EF127D3E65C00FBF3C9 /* UIImageView+Extention .swift */,
 				A11F5E6F27D3CE0100FBF3C9 /* UILabel+Extention .swift */,
 				A11F5E6527D3B2E700FBF3C9 /* UIView+Extention.swift */,
+				A11F5F0A27D438D500FBF3C9 /* UINavigationBar+Extention .swift */,
 				A1709C3027D3550F002D21AE /* UINavigationController+Extentions.swift */,
 				A1709B6227D341F1002D21AE /* UIViewController+Extentions.swift */,
 				A1709BAB27D342F7002D21AE /* UIApplication+Extention .swift */,
@@ -641,7 +687,6 @@
 		A1709BE927D352D9002D21AE /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				A1616E6427D3AA3700142096 /* Persistance */,
 				A1709BEA27D352D9002D21AE /* Result */,
 				A1709BED27D352D9002D21AE /* Networking */,
 				A11F5E6B27D3B78D00FBF3C9 /* Handler */,
@@ -695,49 +740,6 @@
 			path = citylist.json;
 			sourceTree = "<group>";
 		};
-		A1709C3527D35718002D21AE /* APIHandler */ = {
-			isa = PBXGroup;
-			children = (
-				A1709C3627D35718002D21AE /* CityListHandlerProtocol.swift */,
-				A1709C3727D35718002D21AE /* CityListHandler.swift */,
-				A1709C3827D35718002D21AE /* WeatherDetailHandler.swift */,
-				A1709C3927D35718002D21AE /* HomeHandlerProtocol.swift */,
-				A1709C3A27D35718002D21AE /* HomeHandler.swift */,
-				A1709C3B27D35718002D21AE /* WeatherDetailHandlerProtocol.swift */,
-				A11F5F0627D4320E00FBF3C9 /* HistoricalCityHandler.swift */,
-				A11F5F0827D4321F00FBF3C9 /* HistoricalCityHandlerProtocol.swift */,
-			);
-			path = APIHandler;
-			sourceTree = "<group>";
-		};
-		A1709C3C27D35718002D21AE /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				A1709C3D27D35718002D21AE /* HomeViewModel.swift */,
-				A1709C3E27D35718002D21AE /* SettingsViewModel.swift */,
-				A1709C3F27D35718002D21AE /* Dynamic.swift */,
-				A1709C4027D35718002D21AE /* HomeViewModelProtocol.swift */,
-				A1709C4127D35718002D21AE /* WeatherDetailViewModelProtocol.swift */,
-				A1709C4227D35718002D21AE /* AddCityViewModelProtocol.swift */,
-				A1709C4327D35718002D21AE /* AddCityViewModel.swift */,
-				A1709C4427D35718002D21AE /* WeatherDetailViewModel.swift */,
-				A11F5EF727D3FACF00FBF3C9 /* HistoricalCityViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		A1709C4527D35718002D21AE /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				A11F5EF527D3FABD00FBF3C9 /* HistoricalCityViewController.swift */,
-				A1709C4627D35718002D21AE /* WeatherDetailViewController.swift */,
-				A1709C4727D35718002D21AE /* AddCitiesViewController.swift */,
-				A1709C4827D35718002D21AE /* HomeTableViewController.swift */,
-				A1709C4927D35718002D21AE /* SettingsViewController.swift */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
 		A1709C9227D3588A002D21AE /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -767,11 +769,8 @@
 		A1709CC427D35A82002D21AE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A1709CC627D35A82002D21AE /* AddCitiesCell.swift */,
-				A1709CC727D35A82002D21AE /* WeatherDetailTemperatureCell.swift */,
-				A1709CC827D35A82002D21AE /* WeatherDetailOthersCell.swift */,
-				A1709CC927D35A82002D21AE /* HomeCell.swift */,
-				A11F5EF927D404DB00FBF3C9 /* HistoricalCityCell.swift */,
+				A1709A9527D33B8B002D21AE /* Customs */,
+				A1709CD927D35AC2002D21AE /* Storyboards */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1048,7 +1047,6 @@
 				A1709CC127D358E1002D21AE /* UIColor+Extention.swift in Sources */,
 				A1709A8327D3392F002D21AE /* CustomFontDescriptor.swift in Sources */,
 				A11F5E6627D3B2E700FBF3C9 /* UIView+Extention.swift in Sources */,
-				A1709C7D27D35718002D21AE /* SettingsViewController.swift in Sources */,
 				A1709CBA27D3588A002D21AE /* Sys.swift in Sources */,
 				A11F5EFA27D404DB00FBF3C9 /* HistoricalCityCell.swift in Sources */,
 				A1709C5C27D35718002D21AE /* HomeViewModel.swift in Sources */,
@@ -1067,7 +1065,6 @@
 				A1709C0127D352D9002D21AE /* WebService.swift in Sources */,
 				A11F5EFC27D4226700FBF3C9 /* AppDelegate+Theming.swift in Sources */,
 				A11F5F0927D4321F00FBF3C9 /* HistoricalCityHandlerProtocol.swift in Sources */,
-				A1709C5F27D35718002D21AE /* SettingsViewModel.swift in Sources */,
 				A1709A8027D3392F002D21AE /* Typography.swift in Sources */,
 				A1709C0727D352D9002D21AE /* APIManager.swift in Sources */,
 				A11F5E7027D3CE0100FBF3C9 /* UILabel+Extention .swift in Sources */,
@@ -1095,8 +1092,8 @@
 				A1709C7427D35718002D21AE /* WeatherDetailViewController.swift in Sources */,
 				A1709A7D27D3392F002D21AE /* Colors.swift in Sources */,
 				A1709C6527D35718002D21AE /* HomeViewModelProtocol.swift in Sources */,
-				A1709CD327D35A82002D21AE /* WeatherDetailOthersCell.swift in Sources */,
 				A1709BAC27D342F7002D21AE /* UIApplication+Extention .swift in Sources */,
+				A11F5F0B27D438D500FBF3C9 /* UINavigationBar+Extention .swift in Sources */,
 				A1616E6627D3AA3800142096 /* PersistanceManager.swift in Sources */,
 				A1709CA827D3588A002D21AE /* WeatherImageEnum.swift in Sources */,
 				A1709CCD27D35A82002D21AE /* AddCitiesCell.swift in Sources */,
@@ -1107,7 +1104,6 @@
 				A1709C9F27D3588A002D21AE /* CityListModel.swift in Sources */,
 				A1709C5927D35718002D21AE /* WeatherDetailHandlerProtocol.swift in Sources */,
 				A11F5F0727D4320E00FBF3C9 /* HistoricalCityHandler.swift in Sources */,
-				A1709CD027D35A82002D21AE /* WeatherDetailTemperatureCell.swift in Sources */,
 				A1709A9E27D33D7E002D21AE /* UILabels.swift in Sources */,
 				A1709C6B27D35718002D21AE /* AddCityViewModelProtocol.swift in Sources */,
 				A1709A8627D3392F002D21AE /* Font.swift in Sources */,
@@ -1125,7 +1121,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1709C6327D35718002D21AE /* Dynamic.swift in Sources */,
-				A1709CD427D35A82002D21AE /* WeatherDetailOthersCell.swift in Sources */,
 				A1709C0227D352D9002D21AE /* WebService.swift in Sources */,
 				A1709CCE27D35A82002D21AE /* AddCitiesCell.swift in Sources */,
 				A1709A7E27D3392F002D21AE /* Colors.swift in Sources */,
@@ -1154,10 +1149,8 @@
 				A1709C6F27D35718002D21AE /* AddCityViewModel.swift in Sources */,
 				A1709A9F27D33D7E002D21AE /* UILabels.swift in Sources */,
 				A1709CAC27D3588A002D21AE /* WeatherMapResult.swift in Sources */,
-				A1709C7E27D35718002D21AE /* SettingsViewController.swift in Sources */,
 				A1709C4B27D35718002D21AE /* CityListHandlerProtocol.swift in Sources */,
 				A1709B6427D341F1002D21AE /* UIViewController+Extentions.swift in Sources */,
-				A1709CD127D35A82002D21AE /* WeatherDetailTemperatureCell.swift in Sources */,
 				A1709A7B27D3392F002D21AE /* DesignSystem.swift in Sources */,
 				A1709BFF27D352D9002D21AE /* WebServiceProtocol.swift in Sources */,
 				A1709CA627D3588A002D21AE /* Clouds.swift in Sources */,
@@ -1183,7 +1176,6 @@
 				A1709A7827D3392F002D21AE /* AnimationDuration.swift in Sources */,
 				A1709A0E27D33325002D21AE /* PlanRaderTaskTests.swift in Sources */,
 				A1709A7227D3392F002D21AE /* Animation.swift in Sources */,
-				A1709C6027D35718002D21AE /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1198,7 +1190,6 @@
 				A1709C5E27D35718002D21AE /* HomeViewModel.swift in Sources */,
 				A1709BB227D3434D002D21AE /* UIWindow+Extention .swift in Sources */,
 				A1709C0327D352D9002D21AE /* WebService.swift in Sources */,
-				A1709CD227D35A82002D21AE /* WeatherDetailTemperatureCell.swift in Sources */,
 				A1709A1A27D33325002D21AE /* PlanRaderTaskUITestsLaunchTests.swift in Sources */,
 				A1709CBF27D3588A002D21AE /* DetailModel.swift in Sources */,
 				A1709B6927D34259002D21AE /* Constans.swift in Sources */,
@@ -1208,14 +1199,12 @@
 				A1709BF727D352D9002D21AE /* Result.swift in Sources */,
 				A1616E6827D3AA3800142096 /* PersistanceManager.swift in Sources */,
 				A1709C7C27D35718002D21AE /* HomeTableViewController.swift in Sources */,
-				A1709CD527D35A82002D21AE /* WeatherDetailOthersCell.swift in Sources */,
 				A1709C0C27D352D9002D21AE /* FileManagerHandlerProtocol.swift in Sources */,
 				A1709CB327D3588A002D21AE /* WeatherInformation.swift in Sources */,
 				A1709A8227D3392F002D21AE /* Typography.swift in Sources */,
 				A1709A8827D3392F002D21AE /* Font.swift in Sources */,
 				A1709CA727D3588A002D21AE /* Clouds.swift in Sources */,
 				A1709C4C27D35718002D21AE /* CityListHandlerProtocol.swift in Sources */,
-				A1709C6127D35718002D21AE /* SettingsViewModel.swift in Sources */,
 				A1709C0927D352D9002D21AE /* APIManager.swift in Sources */,
 				A1709C4F27D35718002D21AE /* CityListHandler.swift in Sources */,
 				A11F5E6927D3B78100FBF3C9 /* WebServiceMangerHandler.swift in Sources */,
@@ -1243,7 +1232,6 @@
 				A1709CC327D358E1002D21AE /* UIColor+Extention.swift in Sources */,
 				A1709C5227D35718002D21AE /* WeatherDetailHandler.swift in Sources */,
 				A1709CCF27D35A82002D21AE /* AddCitiesCell.swift in Sources */,
-				A1709C7F27D35718002D21AE /* SettingsViewController.swift in Sources */,
 				A1709C5B27D35718002D21AE /* WeatherDetailHandlerProtocol.swift in Sources */,
 				A1709A7927D3392F002D21AE /* AnimationDuration.swift in Sources */,
 				A1709A8527D3392F002D21AE /* CustomFontDescriptor.swift in Sources */,

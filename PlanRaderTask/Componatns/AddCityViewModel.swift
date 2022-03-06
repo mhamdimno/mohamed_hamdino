@@ -13,15 +13,19 @@ class AddCityViewModel: AddCityViewModelProtocol {
     let cityListModel: Dynamic<[CityListModel]>
     let isFinished: Dynamic<Bool>
     var onErrorHandling: ((ErrorResult?) -> Void)?
-
+    let vc:AddCitiesViewController
     private let cityListHandler: CityListHandlerProtocol!
 
-    init(withCityListHandler cityListHandler: CityListHandlerProtocol = CityListHandler()) {
+    init(withCityListHandler cityListHandler: CityListHandlerProtocol = CityListHandler(),vc:AddCitiesViewController) {
         self.cityListHandler = cityListHandler
 
         self.cityListModel = Dynamic([])
         self.isFinished = Dynamic(false)
+        self.vc=vc
         self.fetchCityInfo()
+    }
+    func addCityAndDismiss() {
+        
     }
 
     private func fetchCityInfo() {

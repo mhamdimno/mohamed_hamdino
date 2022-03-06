@@ -8,20 +8,27 @@
 import Foundation
 protocol HistoricalCityProtocol {
     var weatherList: Dynamic<[WeatherInfo]> { get }
-
     var onErrorHandling: ((ErrorResult?) -> Void)? { get set }
+    func goToDetails(model:City)
 }
 class HistoricalCityViewModel: HistoricalCityProtocol {
 
+    func goToDetails(model:City) {
+        let dest=WeatherDetailViewController.instantiate()
+        dest.weatherData=model
+        vc.show(dest)
+    }
 var onErrorHandling: ((ErrorResult?) -> Void)?
     let weatherList: Dynamic<[WeatherInfo]>
     private let city:City?
+    let vc:HistoricalCityViewController
 
 private let historicalListHandler: HistoricalCityHandlerProtocol!
 
-    init(historicalListHandler: HistoricalCityHandlerProtocol = HistoricalCityHandler(), withWeatherInformation city: City?) {
+    init(historicalListHandler: HistoricalCityHandlerProtocol = HistoricalCityHandler(), withWeatherInformation city: City?,vc:HistoricalCityViewController) {
     self.historicalListHandler = historicalListHandler
     self.city=city
+    self.vc=vc
     self.weatherList = Dynamic([WeatherInfo()])
     self.fetchCityInfo()
 }

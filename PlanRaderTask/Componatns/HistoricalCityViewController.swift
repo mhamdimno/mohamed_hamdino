@@ -28,7 +28,7 @@ class HistoricalCityViewController: UITableViewController {
    
     func setupViewModel() {
         
-        self.viewModel = HistoricalCityViewModel( withWeatherInformation: city)
+        self.viewModel = HistoricalCityViewModel( withWeatherInformation: city, vc: self)
       
         self.viewModel?.weatherList.bindAndFire { [weak self] array in
             DispatchQueue.main.async {
@@ -67,7 +67,10 @@ class HistoricalCityViewController: UITableViewController {
     
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "toDetailViewController", sender: indexPath)
+        if let city=city{
+            self.viewModel?.go(model: city)
+        }
+        //self.performSegue(withIdentifier: "toDetailViewController", sender: indexPath)
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
