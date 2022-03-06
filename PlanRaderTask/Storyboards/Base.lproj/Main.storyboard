@@ -3,7 +3,9 @@
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -43,8 +45,10 @@
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
+                                            <color key="tintColor" name="helper"/>
                                         </stackView>
                                     </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="RUJ-ZD-GSp" secondAttribute="trailing" constant="16" id="5n0-aG-cC4"/>
                                         <constraint firstItem="RUJ-ZD-GSp" firstAttribute="leading" secondItem="TjB-yA-yXA" secondAttribute="leading" constant="16" id="FN1-7c-2D9"/>
@@ -52,6 +56,7 @@
                                         <constraint firstAttribute="bottom" secondItem="RUJ-ZD-GSp" secondAttribute="bottom" constant="8" id="kPk-uS-vEF"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="histoyImage" destination="wyC-X8-LiR" id="zlu-c5-7Em"/>
                                     <outlet property="labelCityName" destination="8Ve-ok-WBY" id="yzw-WV-lnX"/>
@@ -64,20 +69,17 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="SnA-Ut-is6">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="settings" id="erX-I5-wO2">
+                        <barButtonItem key="leftBarButtonItem" systemItem="compose" id="hW3-hI-Ez0">
+                            <color key="tintColor" name="helper"/>
                             <connections>
-                                <segue destination="JKU-yX-anT" kind="presentation" identifier="toSettingsViewController" id="sM7-jJ-T8P"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="nSK-bQ-FbE">
-                            <connections>
-                                <segue destination="Myr-k2-wIs" kind="presentation" identifier="toAddCitiesViewController" id="SDs-F3-8SZ"/>
+                                <segue destination="jPe-HS-4gz" kind="presentation" identifier="objectivecInfo" id="2Hf-ej-MK2"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="Q08-DJ-gB4" kind="show" identifier="toDetailViewController" id="bsO-ty-Btt"/>
                         <segue destination="M4L-fU-ARv" kind="presentation" identifier="toHistoricalViewController" id="LNo-Cd-nGn"/>
+                        <segue destination="Myr-k2-wIs" kind="presentation" identifier="toAddCitiesViewController" modalPresentationStyle="fullScreen" id="QmE-Wp-P2j"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jpn-mU-cCS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -89,7 +91,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="SettingsViewController" id="LL4-i9-HSx" customClass="SettingsViewController" customModule="PlanRaderTask" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eRV-C5-i57">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -129,11 +131,11 @@
             <objects>
                 <viewController storyboardIdentifier="WeatherDetailViewController" id="Q08-DJ-gB4" customClass="WeatherDetailViewController" customModule="PlanRaderTask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dA6-Ab-dAw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8R8-Mo-kPP">
-                                <rect key="frame" x="20" y="29.999999999999986" width="374" height="255.66666666666663"/>
+                                <rect key="frame" x="20" y="117.99999999999999" width="374" height="255.66666666666663"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8V-Y3-gen" customClass="TitleLabel" customModule="PlanRaderTask" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="20.333333333333332"/>
@@ -142,7 +144,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="FfE-dV-00j">
-                                        <rect key="frame" x="0.0" y="40.333333333333329" width="374" height="54"/>
+                                        <rect key="frame" x="0.0" y="40.333333333333343" width="374" height="54"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CloudySky" translatesAutoresizingMaskIntoConstraints="NO" id="8Jn-Rt-wM2" customClass="WeatherImage" customModule="PlanRaderTask" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="64" height="54"/>
@@ -159,7 +161,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5cC-Rr-IUt" customClass="BodyLabel" customModule="PlanRaderTask" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="40.333333333333314" width="374" height="20.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="40.333333333333343" width="374" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -208,11 +210,11 @@
             <objects>
                 <viewController storyboardIdentifier="AddCitiesViewController" id="TjT-V7-cXx" customClass="AddCitiesViewController" customModule="PlanRaderTask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AoU-kv-xWu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qsO-Gc-ySz">
-                                <rect key="frame" x="0.0" y="56" width="414" height="64"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="64"/>
                                 <subviews>
                                     <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Tpk-5t-ADc">
                                         <rect key="frame" x="0.0" y="10" width="414" height="44"/>
@@ -234,7 +236,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7pl-O2-w1a">
-                                <rect key="frame" x="0.0" y="120" width="414" height="722"/>
+                                <rect key="frame" x="0.0" y="152" width="414" height="710"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="AddCitiesCell" id="WXE-ra-mh7" customClass="AddCitiesCell" customModule="PlanRaderTask" customModuleProvider="target">
@@ -298,11 +300,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="FlC-yY-1AX">
                         <barButtonItem key="leftBarButtonItem" image="cancel" id="6Ud-Yr-kid">
+                            <color key="tintColor" name="helper"/>
                             <connections>
                                 <action selector="actionCancel:" destination="TjT-V7-cXx" id="P0t-tp-eFC"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="done" id="Kgp-EB-0Sy">
+                            <color key="tintColor" name="helper"/>
                             <connections>
                                 <action selector="actionSave:" destination="TjT-V7-cXx" id="3r8-g2-mrg"/>
                             </connections>
@@ -320,6 +324,7 @@
         <!--Navigation Controller-->
         <scene sceneID="pmX-Ng-bOP">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lfr-XN-q3n" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8dj-0m-ZzT" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lGg-My-6Se">
@@ -331,7 +336,6 @@
                         <segue destination="QXi-Qd-Aw8" kind="relationship" relationship="rootViewController" id="f7F-vf-35z"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Lfr-XN-q3n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="512.79999999999995" y="149.77511244377811"/>
         </scene>
@@ -341,7 +345,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JKU-yX-anT" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AFN-Pw-uSH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -359,7 +363,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Myr-k2-wIs" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="j4m-iu-hJ4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -456,15 +460,83 @@
             </objects>
             <point key="canvasLocation" x="1460.8695652173915" y="-402.45535714285711"/>
         </scene>
+        <!--login-->
+        <scene sceneID="yUI-bY-2LO">
+            <objects>
+                <viewController id="jPe-HS-4gz" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CKL-8H-Uzs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aro-lR-lnE">
+                                <rect key="frame" x="20" y="390.66666666666669" width="374" height="60.666666666666686"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Bh-8b-ymB">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="koz-Yw-ydo">
+                                        <rect key="frame" x="0.0" y="40.333333333333314" width="374" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tfI-xZ-wWt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tfI-xZ-wWt" firstAttribute="trailing" secondItem="aro-lR-lnE" secondAttribute="trailing" constant="20" id="JHO-ls-QwS"/>
+                            <constraint firstItem="aro-lR-lnE" firstAttribute="leading" secondItem="tfI-xZ-wWt" secondAttribute="leading" constant="20" id="i8z-Ub-FOS"/>
+                            <constraint firstItem="aro-lR-lnE" firstAttribute="centerY" secondItem="CKL-8H-Uzs" secondAttribute="centerY" id="rCJ-KM-5H6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="login" id="1qn-bv-l4V"/>
+                    <connections>
+                        <outlet property="email" destination="koz-Yw-ydo" id="90Y-Ad-KFZ"/>
+                        <outlet property="name" destination="0Bh-8b-ymB" id="oBo-RY-Mqh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J9F-6h-zat" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="512" y="923"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AKp-Ny-7OZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4hg-3E-Nrr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QIo-Un-qOR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jPe-HS-4gz" kind="relationship" relationship="rootViewController" id="gZa-iv-dEO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pAi-NN-HI5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-313" y="923"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="guy-aa-IJp"/>
+        <segue reference="2Hf-ej-MK2"/>
+        <segue reference="bsO-ty-Btt"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="CloudySky" width="64" height="54"/>
         <image name="cancel" width="22" height="22"/>
         <image name="done" width="22" height="22"/>
         <image name="info" width="64" height="64"/>
-        <image name="settings" width="22" height="22"/>
+        <namedColor name="helper">
+            <color red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

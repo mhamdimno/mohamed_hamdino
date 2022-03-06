@@ -16,4 +16,7 @@ extension String{
     var toImage:UIImage{
         return UIImage(named: self) ?? UIImage()
     }
+    var toSystemImage:UIImage{
+        return UIImage(systemName: self) ?? UIImage()
+    }
 }

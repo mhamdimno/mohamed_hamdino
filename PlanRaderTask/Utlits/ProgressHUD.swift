@@ -33,7 +33,6 @@ extension ProgressHUD: Progressing {
     }
 
     func DismissSVProgressHUD() {
-        UIApplication.shared.endIgnoringInteractionEvents()
         SVProgressHUD.dismiss()
     }
 }

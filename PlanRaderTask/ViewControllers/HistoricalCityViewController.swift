@@ -17,46 +17,30 @@ class HistoricalCityViewController: UITableViewController {
     var progressHUD: ProgressHUD { return ProgressHUD() }
 
     var city : City?
+    var viewModel: HistoricalCityViewModel?
     private var weatherInfoList: [WeatherInfo] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setUpUI()
         self.setupViewModel()
+        self.setUpUI()
     }
 
+   
     func setupViewModel() {
-        if let city = city {
-            print("🙄name \(city.name)")
-
-            load()
-        }
-//        self.viewModel.weatherList.bindAndFire { [weak self] cities in
-//            DispatchQueue.main.async {
-//              //  self?.arrayWeather = cities
-//                self?.tableView.reloadData()
-//            }
-//        }
-//        self.viewModel.isFinished.bindAndFire { [weak self] isTrue in
-//            if isTrue {
-//                self?.progressHUD.DismissSVProgressHUD()
-//            } else {
-//                self?.progressHUD.ShowSVProgressHUD_Black()
-//            }
-//        }
-//        self.viewModel.onErrorHandling = { [weak self] error in
-//            self?.showAlert(title: "An error occured", message: error?.localizedDescription)
-//        }
-    }
-    private func load(){
-        guard let city = city else {
-            return
-        }
         
-        weatherInfoList = PersistanceManager.shared.fetchWeatherInfo(city: city)
-        print("🙄date \(weatherInfoList.first?.date)")
-
-        tableView.reloadData()
+        self.viewModel = HistoricalCityViewModel( withWeatherInformation: city)
+      
+        self.viewModel?.weatherList.bindAndFire { [weak self] array in
+            DispatchQueue.main.async {
+                self?.weatherInfoList = array
+                self?.tableView.reloadData()
+            }
+        }
+        self.viewModel?.onErrorHandling = { [weak self] error in
+            self?.showAlert(title: "An error occured", message: error?.localizedDescription)
+        }
     }
+  
     func setUpUI() {
         self.title = "Weather Information"
         self.tableView.backgroundColor = UIColor.tableViewBackgroundColor

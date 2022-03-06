@@ -10,25 +10,46 @@ import UIKit
 
 class HomeTableViewController: UITableViewController, AddCitiesDelegate {
   
-    
-
     // MARK: - Segues
     enum Segues: String {
         case showDetail = "toDetailViewController"
         case saveAddCity = "toAddCitiesViewController"
         case historical = "toHistoricalViewController"
+        case objectivecInfo = "objectivecInfo"
+
     }
     var arrayWeather: [City] = [City]()
     var progressHUD: ProgressHUD { return ProgressHUD() }
 
     var viewModel: HomeViewModelProtocol = HomeViewModel()
-
+    let addImageProg=UIImageView()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUI()
         self.setupViewModel()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupAddImageUI()
+    }
 
+
+    private func setupAddImageUI(){
+        let currentWindow: UIWindow? = UIApplication.shared.keyWindow
+
+        addImageProg.image="plus.app.fill".toSystemImage
+        addImageProg.tintColor=DesignSystem.Colors.helper.color
+        addImageProg.addImage()
+        currentWindow?.addSubview(self.addImageProg)
+        self.addImageProg.addTapGesture { [ self] in
+            self.performSegue(withIdentifier: "toAddCitiesViewController", sender: nil)
+
+        }
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        addImageProg.removeFromSuperview()
+    }
     func setupViewModel() {
         self.viewModel.weatherList.bindAndFire { [weak self] cities in
             
@@ -50,10 +71,12 @@ class HomeTableViewController: UITableViewController, AddCitiesDelegate {
     }
 
     func setUpUI() {
-        self.title = "Weather Information"
-        self.tableView.backgroundColor = UIColor.tableViewBackgroundColor
-        self.view.backgroundColor = UIColor.viewBackgroundColor
+        self.title = "Cities"
+        self.view.backgroundColor = .clear
+        self.tableView.backgroundColor = .clear
         self.tableView.tableFooterView = UIView(frame: CGRect.zero)
+        self.tableView.backgroundView = UIImageView(image: "Background".toImage)
+        setupAddImageUI()
     }
 
     func methodAddCities(_ data: CityListModel) {
@@ -114,6 +137,14 @@ class HomeTableViewController: UITableViewController, AddCitiesDelegate {
 
             case .historical:
                 self.prepareSegueForHistoricalVC(segue: segue, sender: sender)
+                break
+                
+            case .historical:
+                self.prepareSegueForHistoricalVC(segue: segue, sender: sender)
+                break
+                
+            case .objectivecInfo:
+
                 break
             }
 

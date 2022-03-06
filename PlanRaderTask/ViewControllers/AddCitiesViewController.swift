@@ -60,6 +60,7 @@ class AddCitiesViewController: UIViewController {
     }
 
     @IBAction func actionCancel(_ sender: AnyObject) {
+        self.progressHUD.DismissSVProgressHUD()
         dismiss(animated: true, completion: nil)
     }
 
