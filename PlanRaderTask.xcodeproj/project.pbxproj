@@ -220,6 +220,8 @@
 		A1709CE327D35AC2002D21AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1709CDC27D35AC2002D21AE /* Main.storyboard */; };
 		A189543227D4A6C900A822B5 /* UITableView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189543127D4A6C900A822B5 /* UITableView+Extention.swift */; };
 		A189543627D4A7BD00A822B5 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A189543427D4A7BD00A822B5 /* HomeCell.xib */; };
+		A189543A27D4AC3D00A822B5 /* bitrise.yml in Resources */ = {isa = PBXBuildFile; fileRef = A189543827D4AC3D00A822B5 /* bitrise.yml */; };
+		A189543C27D4AC7F00A822B5 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = A189543B27D4AC7F00A822B5 /* .swiftlint.yml */; };
 		E1A2E1F7ADD39C6DA36427D6 /* Pods_PlanRaderTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A12EA4F89D9AE4B8CEC60A /* Pods_PlanRaderTask.framework */; };
 /* End PBXBuildFile section */
 
@@ -348,6 +350,8 @@
 		A1709CDD27D35AC2002D21AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A189543127D4A6C900A822B5 /* UITableView+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extention.swift"; sourceTree = "<group>"; };
 		A189543427D4A7BD00A822B5 /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
+		A189543827D4AC3D00A822B5 /* bitrise.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = bitrise.yml; sourceTree = "<group>"; };
+		A189543B27D4AC7F00A822B5 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C2A12EA4F89D9AE4B8CEC60A /* Pods_PlanRaderTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlanRaderTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD05E357358D7C351DD42218 /* Pods-PlanRaderTask-PlanRaderTaskUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlanRaderTask-PlanRaderTaskUITests.debug.xcconfig"; path = "Target Support Files/Pods-PlanRaderTask-PlanRaderTaskUITests/Pods-PlanRaderTask-PlanRaderTaskUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D76F1B8942E651FEC158DEA1 /* Pods-PlanRaderTask-PlanRaderTaskUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlanRaderTask-PlanRaderTaskUITests.release.xcconfig"; path = "Target Support Files/Pods-PlanRaderTask-PlanRaderTaskUITests/Pods-PlanRaderTask-PlanRaderTaskUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -500,6 +504,8 @@
 				A14A64D627D48025007DD334 /* testCityList.json */,
 				A14A64D727D48025007DD334 /* testWeatherData.json */,
 				A14A64D827D48025007DD334 /* testWeatherList.json */,
+				A189543827D4AC3D00A822B5 /* bitrise.yml */,
+				A189543B27D4AC7F00A822B5 /* .swiftlint.yml */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -952,12 +958,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A189543C27D4AC7F00A822B5 /* .swiftlint.yml in Resources */,
 				A14A64DA27D48025007DD334 /* testWeatherData.json in Resources */,
 				A1709A8D27D3399F002D21AE /* Bahij_TheSansArabic-SemiBold.ttf in Resources */,
 				A1709A9027D3399F002D21AE /* Bahij_TheSansArabic-Bold.ttf in Resources */,
 				A1709AB427D33F53002D21AE /* Readme.strings in Resources */,
 				A14A64D927D48025007DD334 /* testCityList.json in Resources */,
 				A1709CE227D35AC2002D21AE /* Main.storyboard in Resources */,
+				A189543A27D4AC3D00A822B5 /* bitrise.yml in Resources */,
 				A14A64DB27D48025007DD334 /* testWeatherList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

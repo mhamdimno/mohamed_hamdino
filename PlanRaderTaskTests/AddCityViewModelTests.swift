@@ -25,8 +25,8 @@ class AddCityViewModelTests: XCTestCase {
 
     func testFetchCityInfo() {
         let exp = expectation(description: "Loading service call")
-        let cityData = StubData.shared.stubCity()
-        mockCityListHandler.cityListData = cityData
+        // let cityData = StubData.shared.stubCity()
+       // mockCityListHandler.cityListData = cityData
         self.viewModel = AddCityViewModel(withCityListHandler: mockCityListHandler, vc: vc)
 
         self.viewModel.cityListModel.bindAndFire { result in
@@ -43,8 +43,8 @@ class AddCityViewModelTests: XCTestCase {
     //for get city success
     func testFetchCityInfoisFinished() {
         let exp = expectation(description: "Loading service call")
-        let cityData = StubData.shared.stubCity()
-        mockCityListHandler.cityListData = cityData
+//        let cityData = StubData.shared.stubCity()
+//        mockCityListHandler.cityListData = cityData
         self.viewModel = AddCityViewModel(withCityListHandler: mockCityListHandler, vc: vc)
 
         self.viewModel.isFinished.bindAndFire { isTrue in

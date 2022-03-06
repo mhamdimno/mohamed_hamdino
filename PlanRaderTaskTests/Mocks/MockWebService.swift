@@ -12,9 +12,9 @@ class MockWebService: WebServiceProtocol {
     var weatherData: Data?
     func fetchData(urlPath: URL?, completion: @escaping ((Result<Data, ErrorResult>) -> Void)) {
         if let data = weatherData {
-            completion(resource.parse(data))
+            // completion(resource.parse(data))
         } else {
-            completion(nil)
+            //completion(nil)
         }
     }
    

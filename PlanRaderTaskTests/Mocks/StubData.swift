@@ -14,7 +14,6 @@ class StubData {
     init() {
 
     }
-
 }
 
 extension StubData {
