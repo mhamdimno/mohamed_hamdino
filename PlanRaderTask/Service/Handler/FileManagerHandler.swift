@@ -1,9 +1,8 @@
 //
 //  FileManagerHandler.swift
-//  Weather
+//  PlanRaderTask
 //
-//  Created by Nischal Hada on 6/23/19.
-//  Copyright © 2019 NischalHada. All rights reserved.
+//  Created by A One Way To Allah on 05/03/2022.
 //
 
 import UIKit

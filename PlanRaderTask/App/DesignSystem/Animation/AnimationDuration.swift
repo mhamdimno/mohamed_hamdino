@@ -2,7 +2,8 @@
 //  Animation.swift
 //  DesignSystem
 //
-//  Created by A One Way To Allah on 10/5/21.
+//  PlanRaderTask
+//  Created by A One Way To Allah on 05/03/2022.
 //
 
 import Foundation
@@ -13,7 +14,7 @@ import Foundation
 enum AnimationDuration: TimeInterval {
     case microFast = 0.1
     case microRegular = 0.2
-    case microSlow = 0.3
+    case microSlow = 2
 
     case macroFast = 0.4
     case macroRegular = 0.5

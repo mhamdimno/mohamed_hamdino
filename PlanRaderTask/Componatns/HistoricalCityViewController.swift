@@ -9,8 +9,6 @@ import UIKit
 
 class HistoricalCityViewController: UITableViewController {
     
-    
-    
     var progressHUD: ProgressHUD { return ProgressHUD() }
     
     var city : City?
@@ -65,7 +63,7 @@ class HistoricalCityViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let city=city{
-            self.viewModel?.goToDetails(model: city)
+            self.viewModel?.goToWeatherDetails(model: city)
         }
     }
     

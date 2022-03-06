@@ -1,10 +1,9 @@
 //
 //  PersistanceManager.swift
-//  RelationCoreData
+//  PlanRaderTask
 //
-//  Created by Diffa Desyawan on 16/06/21.
+//  Created by A One Way To Allah on 05/03/2022.
 //
-
 import Foundation
 import CoreData
 
@@ -24,9 +23,7 @@ class PersistanceManager {
     }()
     
     func setCity(data: CityListModel?,weatherInformation: WeatherInformation?) {
-        print("🙄name \(data?.name)")
-        print("🙄deg \(weatherInformation?.wind?.deg)")
-
+     
        let city = City(context: persistentContainer.viewContext)
         city.id = Int64(data?.id ?? 0)
         city.name = data?.name ?? ""
@@ -44,13 +41,14 @@ class PersistanceManager {
     
 //    func setWeatherInfo(weatherInformation: WeatherInformation?, city: City) {
 //        let weatherInfo = WeatherInfo(context: persistentContainer.viewContext)
+//        
 //        let currentDate=Date()
 //        weatherInfo.date = currentDate.getTimeStringFromDate
 //
 //        weatherInfo.id = Int64(weatherInformation?.id ?? 0)
 //        weatherInfo.degree = "\(weatherInformation?.main?.temp ?? 0)"
 //        weatherInfo.statue = weatherInformation?.weather?[0].main ?? ""
-//      //  weatherInfo.city = city
+//        weatherInfo.city = city
 //        save()
 //    }
     
@@ -79,7 +77,7 @@ class PersistanceManager {
     func fetchWeatherInfo(city: City) -> [WeatherInfo] {
         let request: NSFetchRequest<WeatherInfo> = WeatherInfo.fetchRequest()
         
-        request.predicate = NSPredicate(format: "(city = %@)", city)
+       // request.predicate = NSPredicate(format: "(city = %@)", city)
         
        // request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
         
@@ -87,6 +85,8 @@ class PersistanceManager {
         
         do{
             weatherInfos = try persistentContainer.viewContext.fetch(request)
+            weatherInfos=weatherInfos.filter{$0.id == city.id}
+
         }catch {
             print("Error fetching weatherInfos data")
         }

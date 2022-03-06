@@ -1,15 +1,14 @@
 //
 //  WeatherDetailViewController.swift
-//  Weather
+//  PlanRaderTask
 //
-//  Created by Nischal Hada on 6/19/18.
-//  Copyright © 2018 NischalHada. All rights reserved.
+//  Created by A One Way To Allah on 05/03/2022.
 //
 
 import UIKit
 
 class WeatherDetailViewController: UIViewController {
-   
+    
     @IBOutlet private weak var cityInfoLabel: UILabel!
     @IBOutlet private weak var weatherStatusImage: UIImageView!
     
@@ -17,19 +16,19 @@ class WeatherDetailViewController: UIViewController {
     @IBOutlet private weak var tempLabel: UILabel!
     @IBOutlet private weak var humidityLabel: UILabel!
     @IBOutlet private weak var windSpeed: UILabel!
-
-
-
+    
+    
+    
     var weatherData: City?
     var viewModel: WeatherDetailViewModelProtocol?
     var progressHUD: ProgressHUD { return ProgressHUD() }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupViewModel()
         self.setupUI()
     }
-
+    
     func setupUI() {
         self.navigationItem.title = weatherData?.name
         self.view.backgroundColor = UIColor.viewBackgroundColor
@@ -42,9 +41,16 @@ class WeatherDetailViewController: UIViewController {
         self.tempLabel.setTemp(model?.main?.temp)
         self.humidityLabel.setHumidity(model?.main?.humidity)
         self.windSpeed.setWindSpeed(model?.wind?.speed)
-
+        setupDesignSysytemAnimation()
     }
-   
+    private func setupDesignSysytemAnimation(){
+        
+        let customAnimator = UIViewPropertyAnimator(duration:  AnimationDuration.microSlow.timeInterval, curve: .easeInOut) {
+            self.weatherStatusImage.frame = self.weatherStatusImage.frame.offsetBy(dx:100, dy:0)
+        }
+        customAnimator.startAnimation()
+    }
+    
     func setupViewModel() {
         
         self.viewModel = WeatherDetailViewModel(withWeatherInformation: weatherData)

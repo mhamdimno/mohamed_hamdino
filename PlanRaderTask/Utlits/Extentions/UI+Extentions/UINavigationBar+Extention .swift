@@ -1,11 +1,10 @@
 //
 //  UIBundle+Extention.swift
-//  Fleez
+//  PlanRaderTask
 //
-//  Created by A One Way To Allah on 10/10/21.
-//  Copyright © 2021 A One Way To Allah. All rights reserved.
-//
+//  Created by A One Way To Allah on 05/03/2022.
 
+//
 import UIKit
 
 

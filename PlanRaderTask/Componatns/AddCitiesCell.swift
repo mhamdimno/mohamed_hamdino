@@ -1,9 +1,8 @@
 //
 //  AddCitiesCell.swift
-//  Weather
+//  PlanRaderTask
 //
-//  Created by Nischal Hada on 6/21/18.
-//  Copyright © 2018 NischalHada. All rights reserved.
+//  Created by A One Way To Allah on 05/03/2022.
 //
 
 import UIKit
@@ -11,7 +10,7 @@ import UIKit
 class AddCitiesCell: UITableViewCell {
     @IBOutlet weak var labelCityName: UILabel!
     @IBOutlet weak var labelCityId: UILabel!
-
+    
     var addCitiesModel: CityListModel? {
         didSet {
             guard let data = addCitiesModel else {
@@ -21,7 +20,7 @@ class AddCitiesCell: UITableViewCell {
             labelCityId.text = ""
         }
     }
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

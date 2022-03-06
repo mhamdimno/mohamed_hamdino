@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="20G224" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="City" representedClassName="City" isAbstract="YES" syncable="YES" codeGenerationType="class">
+    <entity name="City" representedClassName="City" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="weatherInfos" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="WeatherInfo" inverseName="city" inverseEntity="WeatherInfo"/>
     </entity>
-    <entity name="WeatherInfo" representedClassName="WeatherInfo" isAbstract="YES" syncable="YES" codeGenerationType="class">
+    <entity name="WeatherInfo" representedClassName="WeatherInfo" syncable="YES" codeGenerationType="class">
         <attribute name="date" optional="YES" attributeType="String"/>
         <attribute name="degree" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>

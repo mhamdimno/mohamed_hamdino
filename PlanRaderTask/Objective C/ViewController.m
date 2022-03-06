@@ -1,11 +1,9 @@
 //
 //  ViewController.m
-//  loginScreen
+//  PlanRaderTask
 //
-//  Created by Ghadeer El-Mahdy on 3/11/20.
-//  Copyright © 2020 Ghadeer El-Mahdy. All rights reserved.
+//  Created by A One Way To Allah on 05/03/2022.
 //
-
 #import "ViewController.h"
 
 @interface ViewController ()

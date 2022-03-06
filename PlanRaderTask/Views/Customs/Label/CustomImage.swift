@@ -1,9 +1,8 @@
 //
 //  CustomImage.swift
-//  MySpaaai
+//  PlanRaderTask
 //
-//  Created by A One Way To Allah on 11/8/20.
-//  Copyright © 2020 A One Way To Allah. All rights reserved.
+//  Created by A One Way To Allah on 05/03/2022.
 //
 
 import UIKit

@@ -1,21 +1,20 @@
 //
 //  CityListHandler.swift
-//  Weather
+//  PlanRaderTask
 //
-//  Created by Nischal Hada on 6/24/19.
-//  Copyright © 2019 NischalHada. All rights reserved.
+//  Created by A One Way To Allah on 05/03/2022.
 //
 
 import Foundation
 
 class CityListHandler: CityListHandlerProtocol {
-
+    
     private let fileManagerHandler: FileManagerHandlerProtocol!
-
+    
     init(withFileManagerHandler fileManagerHandler: FileManagerHandlerProtocol = FileManagerHandler()) {
         self.fileManagerHandler = fileManagerHandler
     }
-
+    
     func fetchCityInfo(withfileName fileName: String, completion: @escaping ((Result<[CityListModel], ErrorResult>) -> Void)) {
         let cityResource = FileManagerResource<[CityListModel]>(fileName: fileName) { data in
             let cityListModel = try? JSONDecoder().decode([CityListModel].self, from: data)

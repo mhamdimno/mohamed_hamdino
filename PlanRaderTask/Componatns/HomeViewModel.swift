@@ -1,27 +1,22 @@
 //
 //  WeatherListViewModel.swift
-//  Weather
+//  PlanRaderTask
 //
-//  Created by Nischal Hada on 6/23/19.
-//  Copyright © 2019 NischalHada. All rights reserved.
+//  Created by A One Way To Allah on 05/03/2022.
 //
 
 import Foundation
 
 class HomeViewModel: HomeViewModelProtocol {
-   
     
-  
-    
-
     let weatherList: Dynamic<[City]>
     let isFinished: Dynamic<Bool>
     var onErrorHandling: ((ErrorResult?) -> Void)?
     let vc:HomeTableViewController
-
+    
     private let weatherListHandler: HomeHandlerProtocol!
-
-
+    
+    
     init(withWeatherListHandler weatherListHandler: HomeHandlerProtocol = HomeHandler(),vc:HomeTableViewController) {
         self.weatherListHandler = weatherListHandler
         self.weatherList = Dynamic([])
@@ -37,8 +32,8 @@ class HomeViewModel: HomeViewModelProtocol {
                 switch result {
                 case .success(let list) :
                     
-                    self?.weatherList.value = list
-
+                    self?.weatherList.value = self?.removeDuplicateElements(cities: list) ?? []
+                    
                     break
                 case .failure(let error) :
                     print("Parser error \(error)")
@@ -59,15 +54,15 @@ class HomeViewModel: HomeViewModelProtocol {
         return uniqueCities
     }
     
-   
+    
     func addCityToLocal(data: CityListModel){
         DispatchQueue.global(qos: .userInteractive).async {
             self.weatherListHandler.fetchCityWeatherInfoToSaveInRelation(withCity: data) { [weak self] result in
-
+                
                 switch result {
                 case .success(let model) :
                     self?.weatherListHandler.addCitytoStorge(weatherInformation: model, data: data){ [weak self] result in
-
+                        
                         self?.isFinished.value = true
                         switch result {
                         case .success(_) :
@@ -81,7 +76,7 @@ class HomeViewModel: HomeViewModelProtocol {
                             break
                         }
                     }
-                  
+                    
                 case .failure(let error) :
                     print("Parser error \(error)")
                     self?.isFinished.value = true
@@ -103,7 +98,7 @@ class HomeViewModel: HomeViewModelProtocol {
             }
         }
     }
-    func goToDetails(model:City?) {
+    func goToWeatherDetails(model:City?) {
         let dest=WeatherDetailViewController.instantiate()
         dest.weatherData=model
         vc.move(dest)
@@ -118,5 +113,5 @@ class HomeViewModel: HomeViewModelProtocol {
         dest.delegate=vc
         vc.move(dest)
     }
-  
+    
 }

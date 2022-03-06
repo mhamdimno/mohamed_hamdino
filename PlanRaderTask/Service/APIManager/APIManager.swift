@@ -1,11 +1,9 @@
 //
 //  APIManager.swift
-//  Weather
+//  PlanRaderTask
 //
-//  Created by Nischal Hada on 6/18/18.
-//  Copyright © 2018 NischalHada. All rights reserved.
+//  Created by A One Way To Allah on 05/03/2022.
 //
-
 import Foundation
 
 
@@ -15,7 +13,6 @@ struct APIManager {
     private static let apiKey = "f5cb0b965ea1564c50c6f1b74534d823"
     private static let weatherUnit = "weather?"
     private static let groupUnit = "group?"
-
     private static let Metric = "metric"
 
 

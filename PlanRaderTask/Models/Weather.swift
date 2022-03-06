@@ -1,9 +1,8 @@
 //
 //  Weather.swift
-//  Weather
+//  PlanRaderTask
 //
-//  Created by Nischal Hada on 6/18/18.
-//  Copyright © 2018 NischalHada. All rights reserved.
+//  Created by A One Way To Allah on 05/03/2022.
 //
 
 import Foundation

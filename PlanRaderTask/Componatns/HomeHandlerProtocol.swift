@@ -1,9 +1,8 @@
 //
 //  WeatherListHandlerProtocol.swift
-//  Weather
+//  PlanRaderTask
 //
-//  Created by Nischal Hada on 6/24/19.
-//  Copyright © 2019 NischalHada. All rights reserved.
+//  Created by A One Way To Allah on 05/03/2022.
 //
 
 import Foundation
@@ -13,5 +12,4 @@ protocol HomeHandlerProtocol {
     func addCitytoStorge(weatherInformation: WeatherInformation, data: CityListModel, completion: @escaping ((Result<Bool, ErrorResult>) -> Void))
     func removeCityfromStorge(data: City, completion: @escaping ((Result<Bool, ErrorResult>) -> Void))
     func fetchCityWeatherInfoToSaveInRelation(withCity city: CityListModel, completion: @escaping ((Result<WeatherInformation, ErrorResult>) -> Void))
-
 }

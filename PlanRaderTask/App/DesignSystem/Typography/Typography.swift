@@ -2,9 +2,8 @@
 //  Typography.swift
 //  DesignSystem
 //
-//  Created by A One Way To Allah on 10/5/21.
-//
-
+//  PlanRaderTask
+//  Created by A One Way To Allah on 05/03/2022.
 import UIKit
 
 extension DesignSystem{

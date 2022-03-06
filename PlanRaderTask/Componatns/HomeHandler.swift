@@ -1,18 +1,16 @@
 //
 //  WeatherListHandler.swift
-//  Weather
+//  PlanRaderTask
 //
-//  Created by Nischal Hada on 6/24/19.
-//  Copyright © 2019 NischalHada. All rights reserved.
+//  Created by A One Way To Allah on 05/03/2022.
 //
 
 import UIKit
 
 class HomeHandler: HomeHandlerProtocol {
- 
     
     private let webServiceHandler: WebServiceProtocol!
-
+    
     init(withWebServiceHandler webServiceHandler: WebServiceProtocol = WebService()) {
         self.webServiceHandler = webServiceHandler
     }
@@ -29,23 +27,23 @@ class HomeHandler: HomeHandlerProtocol {
         completion(.success(true))
     }
     func fetchCityWeatherInfoToSaveInRelation(withCity city: CityListModel, completion: @escaping ((Result< WeatherInformation , ErrorResult>) -> Void)) {
-    let fullUrl=APIManager.weatherAPIURL("\(city.name ?? "")")
+        let fullUrl=APIManager.weatherAPIURL("\(city.name ?? "")")
         
-    webServiceHandler.fetchData(urlPath: fullUrl) { result in
-       switch (result){
-       case .success(let data):
-           do {
-               let model = try JSONDecoder().decode(WeatherInformation.self, from: data)
-               completion(.success(model))
-           } catch {
-               completion(.failure(.parser(string: "Error while parsing json data")))
-           }
-       case .failure(let error):
-           completion(.failure(error))
-
-       }
-   }
-}
-
+        webServiceHandler.fetchData(urlPath: fullUrl) { result in
+            switch (result){
+            case .success(let data):
+                do {
+                    let model = try JSONDecoder().decode(WeatherInformation.self, from: data)
+                    completion(.success(model))
+                } catch {
+                    completion(.failure(.parser(string: "Error while parsing json data")))
+                }
+            case .failure(let error):
+                completion(.failure(error))
+                
+            }
+        }
+    }
+    
     
 }

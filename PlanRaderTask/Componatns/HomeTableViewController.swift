@@ -1,18 +1,16 @@
 //
 //  WeatherTableViewController.swift
-//  Weather
+//  PlanRaderTask
 //
-//  Created by Nischal Hada on 6/19/18.
-//  Copyright © 2018 NischalHada. All rights reserved.
+//  Created by A One Way To Allah on 05/03/2022.
 //
-
 import UIKit
 
 class HomeTableViewController: UITableViewController, AddCitiesDelegate {
-  
+    
     var arrayWeather: [City] = [City]()
     var progressHUD: ProgressHUD { return ProgressHUD() }
-
+    
     var viewModel: HomeViewModelProtocol!
     let addImageProg=UIImageView()
     override func viewDidLoad() {
@@ -24,11 +22,11 @@ class HomeTableViewController: UITableViewController, AddCitiesDelegate {
         super.viewWillAppear(animated)
         setupAddImageUI()
     }
-
-
+    
+    
     private func setupAddImageUI(){
         let currentWindow: UIWindow? = UIApplication.shared.keyWindow
-
+        
         addImageProg.image="add".toImage
         addImageProg.tintColor=DesignSystem.Colors.helper.color
         addImageProg.addImage()
@@ -50,69 +48,63 @@ class HomeTableViewController: UITableViewController, AddCitiesDelegate {
                 self?.tableView.reloadData()
             }
         }
-        self.viewModel.isFinished.bindAndFire { [weak self] isTrue in
-            if isTrue {
-                self?.progressHUD.DismissSVProgressHUD()
-            } else {
-                self?.progressHUD.ShowSVProgressHUD_Black()
-            }
-        }
+      
         self.viewModel.onErrorHandling = { [weak self] error in
             self?.showAlert(title: "An error occured", message: error?.localizedDescription)
         }
     }
-
+    
     func setUpUI() {
         self.title = "Cities"
         self.view.backgroundColor = .clear
         self.tableView.backgroundColor = .clear
         self.tableView.tableFooterView = UIView(frame: CGRect.zero)
         self.tableView.backgroundView = UIImageView(image: "Background".toImage)
+        self.tableView.registerNib(cellClass: HomeCell.self)
         setupAddImageUI()
     }
-
+    
     func methodAddCities(_ data: CityListModel) {
         viewModel.addCityToLocal(data: data)
         
     }
- 
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.arrayWeather.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath) as? HomeCell else {
-            fatalError("WeatherCell not found")
-        }
+        let cell = tableView.dequeue() as HomeCell
         cell.WeatherModel = arrayWeather[indexPath.row]
         cell.histoyImageClicked={[self]in
             viewModel.goToHistorical(model: arrayWeather[safe:indexPath.row])
         }
         return cell
     }
-
+    
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            arrayWeather.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-            viewModel.removeCityFromLocal(data: arrayWeather[indexPath.row])
+            if  let model=arrayWeather[safe:indexPath.row]{
+                arrayWeather.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+                viewModel.removeCityFromLocal(data: model)
+            }
+           
         }
     }
     
-
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("🙄id \(arrayWeather[safe:indexPath.row]?.id)")
-
-        viewModel.goToDetails(model: arrayWeather[safe:indexPath.row])
+        viewModel.goToWeatherDetails(model: arrayWeather[safe:indexPath.row])
     }
-
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return KtableViewHeight
     }
-
-   
+    
+    
 }

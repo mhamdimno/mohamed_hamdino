@@ -1,16 +1,14 @@
 //
 //  WeatherDetailViewModelProtocol.swift
-//  Weather
+//  PlanRaderTask
 //
-//  Created by Nischal Hada on 6/24/19.
-//  Copyright © 2019 NischalHada. All rights reserved.
+//  Created by A One Way To Allah on 05/03/2022.
 //
-
 import Foundation
 
 protocol WeatherDetailViewModelProtocol {
     var onErrorHandling: ((ErrorResult?) -> Void)? { get set }
     var isFinished: Dynamic<Bool> { get }
     var cityWeather: Dynamic<WeatherInformation> { get }
-
+    
 }

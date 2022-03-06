@@ -1,17 +1,18 @@
 //
 //  MainCoordinator.swift
-//  WeatherLogger
+//  PlanRaderTask
 //
-//  Created by Maksim Kalik on 12/9/20.
+//  Created by A One Way To Allah on 05/03/2022.
 //
+
+
 
 import UIKit
 
 class Coordinator {
  
   class func start() {
-        //let vc=HomeTableViewController.instantiateFromXIB()
-      //  UIApplication.window?.rootViewController=vc.toNavigation
+      UIApplication.window?.rootViewController=HomeTableViewController.instantiate().toNavigation
     }
 
 }

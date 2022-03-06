@@ -1,23 +1,21 @@
 //
 //  WeatherDetailHandler.swift
-//  Weather
+//  PlanRaderTask
 //
-//  Created by Nischal Hada on 6/24/19.
-//  Copyright © 2019 NischalHada. All rights reserved.
+//  Created by A One Way To Allah on 05/03/2022.
 //
-
 import Foundation
 
 
 class WeatherDetailHandler: WeatherDetailHandlerProtocol {
-   
+    
     private let webServiceHandler: WebServiceProtocol!
-
+    
     init(withWebServiceHandler webServiceHandler: WebServiceProtocol = WebService()) {
         self.webServiceHandler = webServiceHandler
     }
     func fetchCityWeatherInfo(withCity city: City, completion: @escaping ((Result< WeatherInformation , ErrorResult>) -> Void)) {
-         let fullUrl=APIManager.weatherAPIURL("\(city.name ?? "")")
+        let fullUrl=APIManager.weatherAPIURL("\(city.name ?? "")")
         webServiceHandler.fetchData(urlPath: fullUrl) { result in
             switch (result){
             case .success(let data):
@@ -29,7 +27,7 @@ class WeatherDetailHandler: WeatherDetailHandlerProtocol {
                 }
             case .failure(let error):
                 completion(.failure(error))
-
+                
             }
         }
     }
