@@ -1,0 +1,6 @@
+framework module Pods_PlanRaderTaskTests {
+  umbrella header "Pods-PlanRaderTaskTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
