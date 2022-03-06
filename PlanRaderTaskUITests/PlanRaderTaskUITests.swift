@@ -27,6 +27,12 @@ class PlanRaderTaskUITests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
 
+        let addButton = app.staticTexts["Add"]
+        XCTAssertFalse(addButton.isSelected)
+        addButton.tap()
+        XCTAssertTrue(addButton.isSelected)
+
+          app.staticTexts["Cities"].tap()
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }

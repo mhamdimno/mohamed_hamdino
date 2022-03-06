@@ -36,21 +36,8 @@ class PersistanceManager {
         weatherInfo.statue = weatherInformation?.weather?[0].main ?? ""
         weatherInfo.city=city
         save()
-       // setWeatherInfo(weatherInformation: weatherInformation, city: city)
     }
-    
-//    func setWeatherInfo(weatherInformation: WeatherInformation?, city: City) {
-//        let weatherInfo = WeatherInfo(context: persistentContainer.viewContext)
-//        
-//        let currentDate=Date()
-//        weatherInfo.date = currentDate.getTimeStringFromDate
-//
-//        weatherInfo.id = Int64(weatherInformation?.id ?? 0)
-//        weatherInfo.degree = "\(weatherInformation?.main?.temp ?? 0)"
-//        weatherInfo.statue = weatherInformation?.weather?[0].main ?? ""
-//        weatherInfo.city = city
-//        save()
-//    }
+
     
     func fetchCitys() -> [City] {
         let request: NSFetchRequest<City> = City.fetchRequest()
@@ -76,10 +63,9 @@ class PersistanceManager {
     
     func fetchWeatherInfo(city: City) -> [WeatherInfo] {
         let request: NSFetchRequest<WeatherInfo> = WeatherInfo.fetchRequest()
-        
-       // request.predicate = NSPredicate(format: "(city = %@)", city)
-        
-       // request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+            
+        //request.predicate = NSPredicate(format: "(city = %@)", city)
+       // request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
         
         var weatherInfos: [WeatherInfo] = []
         
@@ -99,8 +85,7 @@ class PersistanceManager {
             do {
                 try context.save()
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }

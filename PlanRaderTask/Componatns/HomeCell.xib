@@ -40,6 +40,7 @@
                         <color key="tintColor" name="helper"/>
                     </stackView>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="Gws-eZ-9Hz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="0O4-pu-kan"/>
                     <constraint firstAttribute="bottom" secondItem="Gws-eZ-9Hz" secondAttribute="bottom" constant="8" id="Bnj-Og-ftU"/>
@@ -48,6 +49,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="histoyImage" destination="xL2-bw-Kd6" id="JxO-jb-VW1"/>
                 <outlet property="labelCityName" destination="hVl-vO-m24" id="Slf-Md-wcf"/>
