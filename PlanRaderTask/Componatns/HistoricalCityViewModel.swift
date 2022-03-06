@@ -13,11 +13,7 @@ protocol HistoricalCityProtocol {
 }
 class HistoricalCityViewModel: HistoricalCityProtocol {
 
-    func goToDetails(model:City) {
-        let dest=WeatherDetailViewController.instantiate()
-        dest.weatherData=model
-        vc.show(dest)
-    }
+    
 var onErrorHandling: ((ErrorResult?) -> Void)?
     let weatherList: Dynamic<[WeatherInfo]>
     private let city:City?
@@ -48,6 +44,12 @@ private let historicalListHandler: HistoricalCityHandlerProtocol!
             }
         }
     }
+    }
+    
+    func goToDetails(model:City) {
+        let dest=WeatherDetailViewController.instantiate()
+        dest.weatherData=model
+        vc.show(dest)
     }
 
 }

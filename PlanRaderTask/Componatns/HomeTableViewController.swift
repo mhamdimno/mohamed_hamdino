@@ -10,18 +10,10 @@ import UIKit
 
 class HomeTableViewController: UITableViewController, AddCitiesDelegate {
   
-    // MARK: - Segues
-    enum Segues: String {
-        case showDetail = "toDetailViewController"
-        case saveAddCity = "toAddCitiesViewController"
-        case historical = "toHistoricalViewController"
-        case objectivecInfo = "objectivecInfo"
-
-    }
     var arrayWeather: [City] = [City]()
     var progressHUD: ProgressHUD { return ProgressHUD() }
 
-    var viewModel: HomeViewModelProtocol = HomeViewModel()
+    var viewModel: HomeViewModelProtocol!
     let addImageProg=UIImageView()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,13 +29,12 @@ class HomeTableViewController: UITableViewController, AddCitiesDelegate {
     private func setupAddImageUI(){
         let currentWindow: UIWindow? = UIApplication.shared.keyWindow
 
-        addImageProg.image="plus.app.fill".toSystemImage
+        addImageProg.image="add".toImage
         addImageProg.tintColor=DesignSystem.Colors.helper.color
         addImageProg.addImage()
         currentWindow?.addSubview(self.addImageProg)
         self.addImageProg.addTapGesture { [ self] in
-            self.performSegue(withIdentifier: "toAddCitiesViewController", sender: nil)
-
+            viewModel.goToAddCity()
         }
     }
     override func viewWillDisappear(_ animated: Bool) {
@@ -51,6 +42,7 @@ class HomeTableViewController: UITableViewController, AddCitiesDelegate {
         addImageProg.removeFromSuperview()
     }
     func setupViewModel() {
+        self.viewModel=HomeViewModel(vc:self)
         self.viewModel.weatherList.bindAndFire { [weak self] cities in
             
             DispatchQueue.main.async {
@@ -94,7 +86,7 @@ class HomeTableViewController: UITableViewController, AddCitiesDelegate {
         }
         cell.WeatherModel = arrayWeather[indexPath.row]
         cell.histoyImageClicked={[self]in
-            self.performSegue(withIdentifier: "toHistoricalViewController", sender: indexPath)
+            viewModel.goToHistorical(model: arrayWeather[safe:indexPath.row])
         }
         return cell
     }
@@ -113,78 +105,14 @@ class HomeTableViewController: UITableViewController, AddCitiesDelegate {
     
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       self.performSegue(withIdentifier: "toDetailViewController", sender: indexPath)
+        print("🙄id \(arrayWeather[safe:indexPath.row]?.id)")
+
+        viewModel.goToDetails(model: arrayWeather[safe:indexPath.row])
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return KtableViewHeight
     }
 
-    // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if
-            let identifier = segue.identifier,
-            let segueValue = Segues(rawValue: identifier)
-        {
-
-            switch segueValue {
-            case .showDetail:
-                self.prepareSegueForWeatherDetailVC(for: segue, sender: sender)
-
-            case .saveAddCity:
-                self.prepareSegueForAddWeatherVC(segue: segue)
-                break
-
-            case .historical:
-                self.prepareSegueForHistoricalVC(segue: segue, sender: sender)
-                break
-                
-            case .historical:
-                self.prepareSegueForHistoricalVC(segue: segue, sender: sender)
-                break
-                
-            case .objectivecInfo:
-
-                break
-            }
-
-        } else {
-            fatalError("segue not found")
-        }
-    }
-}
-
-extension HomeTableViewController {
-
-    private func prepareSegueForWeatherDetailVC(for segue: UIStoryboardSegue, sender: Any?) {
-        if
-            let indexPath = sender as? IndexPath,
-            let controller = segue.destination as? WeatherDetailViewController
-        {
-            controller.weatherData = self.arrayWeather[indexPath.row]
-        }
-    }
-
-    private func prepareSegueForHistoricalVC(segue: UIStoryboardSegue, sender: Any?) {
-        if
-            let indexPath = sender as? IndexPath,
-            let navigationController = segue.destination as? UINavigationController,
-            let vc = navigationController.viewControllers.first as? HistoricalCityViewController
-        {
-            vc.city = self.arrayWeather[indexPath.row]
-        } else {
-            fatalError("NavigationController not found")
-        }
-    }
-
-    private func prepareSegueForAddWeatherVC(segue: UIStoryboardSegue) {
-        if
-            let navigationController = segue.destination as? UINavigationController,
-            let CitiesVC = navigationController.viewControllers.first as? AddCitiesViewController
-        {
-            CitiesVC.delegate = self
-        } else {
-            fatalError("NavigationController not found")
-        }
-    }
+   
 }

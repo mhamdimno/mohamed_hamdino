@@ -28,7 +28,7 @@ extension ProgressHUD: Progressing {
         SVProgressHUD.show()
         SVProgressHUD.setDefaultStyle(SVProgressHUDStyle.custom)
         SVProgressHUD.setBackgroundColor( UIColor.black.withAlphaComponent(0.4))
-        SVProgressHUD.setForegroundColor(DesignSystem.Colors.primary.color)
+        SVProgressHUD.setForegroundColor(DesignSystem.Colors.helper.color)
         SVProgressHUD.setRingThickness( 1.0)
     }
 

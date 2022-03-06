@@ -15,5 +15,10 @@ protocol HomeViewModelProtocol {
     func removeCityFromLocal(data:City)
     var onErrorHandling: ((ErrorResult?) -> Void)? { get set }
     var isFinished: Dynamic<Bool> { get }
+    func goToDetails(model:City?)
+    func goToHistorical(model:City?)
+    func goToAddCity()
+
+
 
 }

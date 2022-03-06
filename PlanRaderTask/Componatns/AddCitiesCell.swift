@@ -18,7 +18,7 @@ class AddCitiesCell: UITableViewCell {
                 return
             }
             labelCityName.text = data.name
-            labelCityId.text = "\(data.id ?? 0)"
+            labelCityId.text = ""
         }
     }
 

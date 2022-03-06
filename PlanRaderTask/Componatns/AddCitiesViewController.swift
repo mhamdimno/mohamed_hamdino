@@ -29,10 +29,10 @@ class AddCitiesViewController: UIViewController {
         super.viewDidLoad()
         self.setUpUI()
         self.setupViewModel()
-        viewModel=AddCityViewModel(vc:self)
     }
 
     func setupViewModel() {
+        viewModel=AddCityViewModel(vc:self)
         self.viewModel.cityListModel.bindAndFire { [weak self] list in
             DispatchQueue.main.async {
                 self?.cityList = list
@@ -62,7 +62,7 @@ class AddCitiesViewController: UIViewController {
 
     @IBAction func actionCancel(_ sender: AnyObject) {
         self.progressHUD.DismissSVProgressHUD()
-        dismiss(animated: true, completion: nil)
+        self.pop()
     }
 
     @IBAction func actionSave(_ sender: AnyObject) {}
@@ -136,7 +136,7 @@ extension AddCitiesViewController: UITableViewDelegate {
      let city = filteredList[indexPath.row]
         if let delegate = self.delegate {
             delegate.methodAddCities(city)
-            self.dismiss(animated: true)
+            self.pop()
         }
     }
 

@@ -30,12 +30,6 @@ class PersistanceManager {
        let city = City(context: persistentContainer.viewContext)
         city.id = Int64(data?.id ?? 0)
         city.name = data?.name ?? ""
-        save()
-        setWeatherInfo(weatherInformation: weatherInformation, city: city)
-        save()
-    }
-    
-    func setWeatherInfo(weatherInformation: WeatherInformation?, city: City) {
         let weatherInfo = WeatherInfo(context: persistentContainer.viewContext)
         let currentDate=Date()
         weatherInfo.date = currentDate.getTimeStringFromDate
@@ -43,9 +37,22 @@ class PersistanceManager {
         weatherInfo.id = Int64(weatherInformation?.id ?? 0)
         weatherInfo.degree = "\(weatherInformation?.main?.temp ?? 0)"
         weatherInfo.statue = weatherInformation?.weather?[0].main ?? ""
-        weatherInfo.city = city
+        weatherInfo.city=city
         save()
+       // setWeatherInfo(weatherInformation: weatherInformation, city: city)
     }
+    
+//    func setWeatherInfo(weatherInformation: WeatherInformation?, city: City) {
+//        let weatherInfo = WeatherInfo(context: persistentContainer.viewContext)
+//        let currentDate=Date()
+//        weatherInfo.date = currentDate.getTimeStringFromDate
+//
+//        weatherInfo.id = Int64(weatherInformation?.id ?? 0)
+//        weatherInfo.degree = "\(weatherInformation?.main?.temp ?? 0)"
+//        weatherInfo.statue = weatherInformation?.weather?[0].main ?? ""
+//      //  weatherInfo.city = city
+//        save()
+//    }
     
     func fetchCitys() -> [City] {
         let request: NSFetchRequest<City> = City.fetchRequest()

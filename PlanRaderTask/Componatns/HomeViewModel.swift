@@ -17,13 +17,15 @@ class HomeViewModel: HomeViewModelProtocol {
     let weatherList: Dynamic<[City]>
     let isFinished: Dynamic<Bool>
     var onErrorHandling: ((ErrorResult?) -> Void)?
+    let vc:HomeTableViewController
 
     private let weatherListHandler: HomeHandlerProtocol!
 
 
-    init(withWeatherListHandler weatherListHandler: HomeHandlerProtocol = HomeHandler()) {
+    init(withWeatherListHandler weatherListHandler: HomeHandlerProtocol = HomeHandler(),vc:HomeTableViewController) {
         self.weatherListHandler = weatherListHandler
         self.weatherList = Dynamic([])
+        self.vc=vc
         self.isFinished = Dynamic(false)
         self.fetchCityInfo()
     }
@@ -101,4 +103,20 @@ class HomeViewModel: HomeViewModelProtocol {
             }
         }
     }
+    func goToDetails(model:City?) {
+        let dest=WeatherDetailViewController.instantiate()
+        dest.weatherData=model
+        vc.move(dest)
+    }
+    func goToHistorical(model: City?) {
+        let dest=HistoricalCityViewController.instantiate()
+        dest.city=model
+        vc.to(dest)
+    }
+    func goToAddCity() {
+        let dest=AddCitiesViewController.instantiate()
+        dest.delegate=vc
+        vc.move(dest)
+    }
+  
 }

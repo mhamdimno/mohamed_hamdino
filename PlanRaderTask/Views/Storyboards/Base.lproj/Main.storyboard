@@ -324,7 +324,6 @@
         <!--Navigation Controller-->
         <scene sceneID="pmX-Ng-bOP">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Lfr-XN-q3n" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8dj-0m-ZzT" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lGg-My-6Se">
@@ -336,6 +335,7 @@
                         <segue destination="QXi-Qd-Aw8" kind="relationship" relationship="rootViewController" id="f7F-vf-35z"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lfr-XN-q3n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="512.79999999999995" y="149.77511244377811"/>
         </scene>
@@ -533,7 +533,7 @@
         <image name="done" width="22" height="22"/>
         <image name="info" width="64" height="64"/>
         <namedColor name="helper">
-            <color red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.764087081" green="0.33274328710000001" blue="0.3989904225" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

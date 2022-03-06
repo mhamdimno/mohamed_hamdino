@@ -14,12 +14,12 @@ extension UIImageView{
     func addImage(){
          
          var height:CGFloat=10
-         var x:CGFloat = 16
-            let size:CGFloat=30
-            x=UIScreen.main.bounds.width - 24 - size
+         var x:CGFloat = 0
+            let size:CGFloat=80
+            x=UIScreen.main.bounds.width - x - size
        
          if UIDevice.withNotch{
-             height=50
+             height=40
          }
          self.frame=CGRect(x: x, y: height, width: size, height: size)
      }
